@@ -53,6 +53,7 @@
             this.btnAddCustomers.TabIndex = 0;
             this.btnAddCustomers.Text = "&Add Customers";
             this.btnAddCustomers.UseVisualStyleBackColor = true;
+            this.btnAddCustomers.Click += new System.EventHandler(this.btnAddCustomers_Click);
             // 
             // btnSearchCustomers
             // 

@@ -36,7 +36,7 @@ namespace Acme_Project
                     while (rdr.Read())
                     {
                         //Define the list items
-                        Customer customer = new Customer(
+                        var customer = new Customer(
                             int.Parse(rdr["CustomerID"].ToString()),
                             int.Parse(rdr["CategoryID"].ToString()),
                             rdr["FirstName"].ToString(),
@@ -73,6 +73,13 @@ namespace Acme_Project
         private void frmCustomers_Load(object sender, EventArgs e)
         {
             DisplayCustomers();
+        }
+
+        private void btnAddCustomers_Click(object sender, EventArgs e)
+        {
+            frmAddCustomers customersAdd = new frmAddCustomers();
+            customersAdd.Show();
+            this.Hide();
         }
     }      
 }
