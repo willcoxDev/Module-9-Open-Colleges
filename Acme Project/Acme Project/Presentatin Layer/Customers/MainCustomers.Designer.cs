@@ -96,7 +96,7 @@
             this.birthDate});
             this.lvCustomers.FullRowSelect = true;
             this.lvCustomers.GridLines = true;
-            this.lvCustomers.Location = new System.Drawing.Point(53, 84);
+            this.lvCustomers.Location = new System.Drawing.Point(53, 66);
             this.lvCustomers.Name = "lvCustomers";
             this.lvCustomers.Size = new System.Drawing.Size(802, 413);
             this.lvCustomers.TabIndex = 6;
@@ -110,7 +110,7 @@
             // 
             // categoryID
             // 
-            this.categoryID.Text = "Caregory ID";
+            this.categoryID.Text = "Category ID";
             this.categoryID.Width = 80;
             // 
             // firstName
@@ -166,6 +166,7 @@
             this.Name = "frmCustomers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customers";
+            this.Load += new System.EventHandler(this.frmCustomers_Load);
             this.ResumeLayout(false);
 
         }

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Acme_Project.Business_Logic_Layer
 {
-    class Customers
+    class Customer
     {
         //Declare properties of a Customer
         private string firstName, lastName, gender, address,
                        suburb, state;
-        private int customerID, categoryId, postCode;
-        private date
+        private int customerID, categoryID, postCode;
+        private DateTime birthDate;
 
 
         //Set-Get properties
@@ -66,29 +66,34 @@ namespace Acme_Project.Business_Logic_Layer
 
         public int CategoryID
         {
-            get { return categoryId; }
-            set { categoryId = value; }
+            get { return categoryID; }
+            set { categoryID = value; }
+        }
+        public DateTime BirthDate
+        {
+            get { return birthDate; }
+            set { birthDate = value; }
         }
 
         //Declaring Default Constructor
-        public Customers() { }
+        public Customer() { }
 
         //Parameterised Constructor
-        public Customers(int customerid, int categoryid, string firstname,
-                         string lastname, string category,
+        public Customer(int customerid, int categoryid, string firstname,
+                         string lastname,
                          string gender, string address, string suburb,
-                         string state, int postcode)
+                         string state, int postcode, DateTime birthdate)
         {
             CustomerID = customerid;
             CategoryID = categoryid;
             FirstName = firstname;
             LastName = lastname;
-            Category = category;
             Gender = gender;
             Address = address;
             Suburb = suburb;
             State = state;
             PostCode = postcode;
+            BirthDate = birthdate;
         }
     }
 }

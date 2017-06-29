@@ -94,7 +94,7 @@
     <Compile Include="Presentatin Layer\Customers\UpdateCustomers.Designer.cs">
       <DependentUpon>UpdateCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data Access Layer\ConnectionManaget.cs" />
+    <Compile Include="Data Access Layer\ConnectionManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentatin Layer\Categories\AddCategory.resx">
