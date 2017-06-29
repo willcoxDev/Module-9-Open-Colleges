@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{50EAEE71-0AA6-4293-84CC-1C322BF04DAE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Acme_Project</RootNamespace>
+    <AssemblyName>Acme Project</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business Logic Layer\Customers.cs" />
+    <Compile Include="Presentatin Layer\Categories\AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Categories\AddCategory.Designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentatin Layer\Categories\Categories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Categories\Categories.Designer.cs">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentatin Layer\Categories\SearchCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Categories\SearchCategory.Designer.cs">
+      <DependentUpon>SearchCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentatin Layer\Categories\UpdateCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Categories\UpdateCategory.Designer.cs">
+      <DependentUpon>UpdateCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentatin Layer\Customers\AddCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Customers\AddCustomers.Designer.cs">
+      <DependentUpon>AddCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentatin Layer\Customers\MainCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Customers\MainCustomers.Designer.cs">
+      <DependentUpon>MainCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentatin Layer\Customers\SearchCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Customers\SearchCustomers.Designer.cs">
+      <DependentUpon>SearchCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentatin Layer\Customers\UpdateCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Customers\UpdateCustomers.Designer.cs">
+      <DependentUpon>UpdateCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data Access Layer\ConnectionManaget.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentatin Layer\Categories\AddCategory.resx">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentatin Layer\Categories\Categories.resx">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentatin Layer\Categories\SearchCategory.resx">
+      <DependentUpon>SearchCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentatin Layer\Categories\UpdateCategory.resx">
+      <DependentUpon>UpdateCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentatin Layer\Customers\AddCustomers.resx">
+      <DependentUpon>AddCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentatin Layer\Customers\MainCustomers.resx">
+      <DependentUpon>MainCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentatin Layer\Customers\SearchCustomers.resx">
+      <DependentUpon>SearchCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentatin Layer\Customers\UpdateCustomers.resx">
+      <DependentUpon>UpdateCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presentatin Layer\Products\" />
+    <Folder Include="Presentatin Layer\ProductTypes\" />
+    <Folder Include="Presentatin Layer\Sales\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
