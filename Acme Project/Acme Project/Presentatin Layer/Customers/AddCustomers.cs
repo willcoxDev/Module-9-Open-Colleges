@@ -29,6 +29,7 @@ namespace Acme_Project
                 {
                     gender = "F";
                 }
+                //Create an object of the customer class.
                 var newCustomer = new Customer(int.Parse(txtCustomerID.Text),
                     (cbCategoryID.SelectedIndex) + 1,
                     txtFirstName.Text,
@@ -40,14 +41,13 @@ namespace Acme_Project
                     int.Parse(txtPostcode.Text),
                     dtBirthDate.Value);
 
-                //Making it so SQL injection is not possible
-                string addQuery = "INSERT INTO Customers(categoryID, firstName, lastName" +
-                    ", gender, address, suburb, state, postcode, birthDate)VALUES" +
-                    "(@CategoryID, @FirstName, @LastName, @Gender, @Address, @Suburb, @State" +
-                    ", @Postcode, @BirthDate)";
+                
 
                 using (var conn = ConnectionManager.DatabaseConnection())
-                using (var cmd = new SqlCommand(addQuery, conn))
+                using (var cmd = new SqlCommand("sp_Customers_CreateCustomer", conn) //Specify the Stored Procedure
+                {
+                    CommandType = CommandType.StoredProcedure
+                })
                 {
                     cmd.Parameters.AddWithValue("CategoryID", newCustomer.CategoryID);
                     cmd.Parameters.AddWithValue("FirstName", newCustomer.FirstName);
@@ -58,14 +58,38 @@ namespace Acme_Project
                     cmd.Parameters.AddWithValue("State", newCustomer.State);
                     cmd.Parameters.AddWithValue("Postcode", newCustomer.PostCode);
                     cmd.Parameters.AddWithValue("BirthDate", newCustomer.BirthDate);
+                    SqlParameter ncid = cmd.Parameters.Add("NewCustomerID", SqlDbType.Int); ncid.Direction = ParameterDirection.Output;
 
-                    cmd.ExecuteNonQuery(); 
-                    
+                    cmd.Transaction = conn.BeginTransaction();
+                    cmd.ExecuteNonQuery();
+                    cmd.Transaction.Commit();
+
+                }
+                // Show msgbox to either go back to frmCustomers or clear this current form to add another customer.
+                if(MessageBox.Show("Would you like to add another customer into the database", "Add another?",
+                    MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    txtFirstName.Clear();
+                    txtLastName.Clear();
+                    txtAddress.Clear();
+                    txtSuburb.Clear();
+                    txtCustomerID.Clear();
+                    txtPostcode.Clear();
+                    rbFemale.Checked = false;
+                    rbMale.Checked = false;
+                    cbCategoryID.SelectedIndex = -1;
+                    cbState.SelectedIndex = -1;
+                }
+                else
+                {
+                    frmCustomers mainCustomers = new frmCustomers();
+                    mainCustomers.Show();
+                    this.Hide();
                 }
 
              } 
         }
-
+        //Validate all the input, Show Error message box with with the problem the user has.
         private bool validateInput()
         {
             if(String.IsNullOrEmpty(txtFirstName.Text))
@@ -124,7 +148,7 @@ namespace Acme_Project
                 return false;
             }
             int parsedCustomerID;
-            if (!int.TryParse(txtPostcode.Text, out parsedCustomerID))
+            if (!int.TryParse(txtCustomerID.Text, out parsedCustomerID))
             {
                 MessageBox.Show("Customer ID must be an number.");
                 return false;

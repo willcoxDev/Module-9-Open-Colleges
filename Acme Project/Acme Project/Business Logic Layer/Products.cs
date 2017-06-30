@@ -3,33 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
 namespace Acme_Project.Business_Logic_Layer
 {
-    class Customer
+    class Products
     {
-   
-        //Set-Get properties
-        public int CustomerID { get; set; }
-
-        public string FirstName { get; set; }
-
-        public string LastName { get; set; }
-
-        public string Gender { get; set; }
-
-        public string Address { get; set; }
-
-        public string Suburb { get; set; }
-
-        public string State { get; set; }
-
-        public int PostCode { get; set; }
-
-        public int CategoryID { get; set; }
-
-        public DateTime BirthDate { get; set; }
-
+        
+        //Declare properties of a Customer
+        
+        public int ProductID { get; set; }
+        public int ProductTypeID { get; set; }
+        public string ProductName { get; set; }
+        public string YearlyPremium { get; set; }
 
         //Declaring Default Constructor
         public Customer() { }
@@ -51,5 +36,8 @@ namespace Acme_Project.Business_Logic_Layer
             PostCode = postcode;
             BirthDate = birthdate;
         }
+        
     }
 }
+*/
+   

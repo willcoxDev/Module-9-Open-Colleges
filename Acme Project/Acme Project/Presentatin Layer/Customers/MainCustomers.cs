@@ -18,13 +18,13 @@ namespace Acme_Project
         public frmCustomers()
         {
             InitializeComponent();
-            
-           
+
         }
         private void DisplayCustomers()
         {
             string selectQuery;
             selectQuery = "SELECT * FROM Customers";
+            List<Customer> cusList = new List<Customer>();
             try
             {
                 // Automatically  open and close the connection
@@ -48,26 +48,17 @@ namespace Acme_Project
                             int.Parse(rdr["Postcode"].ToString()),
                             DateTime.Parse(rdr["BirthDate"].ToString()));
 
-                        ListViewItem lvi = new ListViewItem(customer.CustomerID.ToString());
-                        lvi.SubItems.Add(customer.CategoryID.ToString());
-                        lvi.SubItems.Add(customer.FirstName);
-                        lvi.SubItems.Add(customer.LastName);
-                        lvi.SubItems.Add(customer.Address);
-                        lvi.SubItems.Add(customer.Suburb);
-                        lvi.SubItems.Add(customer.State);
-                        lvi.SubItems.Add(customer.PostCode.ToString());
-                        lvi.SubItems.Add(customer.Gender);
-                        lvi.SubItems.Add(customer.BirthDate.ToString());
-                        lvCustomers.Items.Add(lvi);
+                        cusList.Add(customer);
                     }
+                    dgvCustomers.DataSource = cusList;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Unsuccessful" + ex);
             }
-            
-           
+
+
         }
 
         private void frmCustomers_Load(object sender, EventArgs e)
@@ -81,6 +72,68 @@ namespace Acme_Project
             customersAdd.Show();
             this.Hide();
         }
-    }      
-}
 
+        private void btnUpdateCustomers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteCustomers_Click(object sender, EventArgs e)
+        {
+            if (dgvCustomers.SelectedRows.Count > 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you wish to delete this customer?", "Customer Delete", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+                DataGridViewRow selectedRow = dgvCustomers.SelectedRows[0]; //Selecting the row
+                var deleteCustomer = (Customer)selectedRow.DataBoundItem; //setting deleteCustomer to an instance of the Customer Class of the selected row.
+
+                //Test to see if the customer can be deleted
+
+
+                //Code to delete the Customer
+                using (var conn = ConnectionManager.DatabaseConnection())
+                {
+                    using (var cmd = new SqlCommand("sp_Customers_AllowDeleteCustomer", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("CustomerID", deleteCustomer.CustomerID);
+                        cmd.Parameters.Add("RecordCount", SqlDbType.Int).Direction = ParameterDirection.Output;
+                        cmd.Transaction = conn.BeginTransaction();
+                        cmd.ExecuteNonQuery();
+                        cmd.Transaction.Commit();
+                        int validDelete = Convert.ToInt32(cmd.Parameters["RecordCount"].Value);
+                        if (validDelete == 1)
+                        {
+                            MessageBox.Show("Customer can not be deleted.", "Error");
+                            return;
+                        }
+                    }
+                    using (var cmd = new SqlCommand("sp_Customers_DeleteCustomer", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("CustomerID", deleteCustomer.CustomerID);
+
+                        cmd.Transaction = conn.BeginTransaction();
+                        cmd.ExecuteNonQuery();
+                        cmd.Transaction.Commit();
+
+                        DisplayCustomers(); //Refresh the table
+                    }
+
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Please select a Customer to delete from the table.", "Error");
+            }
+
+
+
+        }
+    }
+}

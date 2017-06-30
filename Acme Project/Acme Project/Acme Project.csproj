@@ -45,7 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business Logic Layer\Categories.cs" />
     <Compile Include="Business Logic Layer\Customers.cs" />
+    <Compile Include="Business Logic Layer\Products.cs" />
+    <Compile Include="Business Logic Layer\ProductTypes.cs" />
+    <Compile Include="Business Logic Layer\Sales.cs" />
     <Compile Include="Presentatin Layer\Categories\AddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
