@@ -62,6 +62,55 @@ namespace Acme_Project
 
         }
 
+        private void DisplaySearch()
+        {
+
+            string selectQuery;
+            selectQuery = "SELECT * FROM Customers";
+            if (rbSearchFirstName.Checked)
+            {
+                selectQuery += " WHERE FirstName = '" + txtSearchFirstName.Text + "'";
+            }
+            if (rbSearchState.Checked)
+            {
+                selectQuery += " WHERE State = '" + cbState.Text + "'";
+            }
+            List<Customer> cusList = new List<Customer>();
+            try
+            {
+                // Automatically  open and close the connection
+                using (var conn = ConnectionManager.DatabaseConnection())
+                using (var cmd = new SqlCommand(selectQuery, conn))
+                using (var rdr = cmd.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        //Define the list items
+                        var customer = new Customer(
+                            int.Parse(rdr["CustomerID"].ToString()),
+                            int.Parse(rdr["CategoryID"].ToString()),
+                            rdr["FirstName"].ToString(),
+                            rdr["LastName"].ToString(),
+                            rdr["Gender"].ToString(),
+                            rdr["Address"].ToString(),
+                            rdr["Suburb"].ToString(),
+                            rdr["State"].ToString(),
+                            int.Parse(rdr["Postcode"].ToString()),
+                            DateTime.Parse(rdr["BirthDate"].ToString()));
+
+                        cusList.Add(customer);
+                    }
+                    dgvCustomers.DataSource = cusList;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unsuccessful" + ex);
+            }
+
+
+        }
+
         private void frmCustomers_Load(object sender, EventArgs e)
         {
             DisplayCustomers();
@@ -145,6 +194,19 @@ namespace Acme_Project
 
 
 
+        }
+
+        //Executes a specific function depending on which radio button is checked in search parameters.
+        private void btnSearchCustomers_Click(object sender, EventArgs e)
+        {
+            if (rbShowAll.Checked)
+            {
+                DisplayCustomers();
+            }
+            if (rbSearchFirstName.Checked || rbSearchState.Checked)
+            {
+                DisplaySearch();
+            }
         }
     }
 }

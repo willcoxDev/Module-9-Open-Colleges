@@ -86,12 +86,6 @@
     <Compile Include="Presentatin Layer\Customers\MainCustomers.Designer.cs">
       <DependentUpon>MainCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentatin Layer\Customers\SearchCustomers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentatin Layer\Customers\SearchCustomers.Designer.cs">
-      <DependentUpon>SearchCustomers.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentatin Layer\Customers\UpdateCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +93,18 @@
       <DependentUpon>UpdateCustomers.cs</DependentUpon>
     </Compile>
     <Compile Include="Data Access Layer\ConnectionManager.cs" />
+    <Compile Include="Presentatin Layer\Maintenance\Maintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Maintenance\Maintenance.Designer.cs">
+      <DependentUpon>Maintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentatin Layer\Products\mainProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Products\mainProducts.Designer.cs">
+      <DependentUpon>mainProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentatin Layer\Categories\AddCategory.resx">
@@ -119,11 +125,14 @@
     <EmbeddedResource Include="Presentatin Layer\Customers\MainCustomers.resx">
       <DependentUpon>MainCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Customers\SearchCustomers.resx">
-      <DependentUpon>SearchCustomers.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Presentatin Layer\Customers\UpdateCustomers.resx">
       <DependentUpon>UpdateCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentatin Layer\Maintenance\Maintenance.resx">
+      <DependentUpon>Maintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentatin Layer\Products\mainProducts.resx">
+      <DependentUpon>mainProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -149,7 +158,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Presentatin Layer\Products\" />
     <Folder Include="Presentatin Layer\ProductTypes\" />
     <Folder Include="Presentatin Layer\Sales\" />
   </ItemGroup>

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Acme_Project.Customers
+namespace Acme_Project.Presentatin_Layer.Products
 {
-    public partial class SearchCustomers : Form
+    public partial class frmMainProducts : Form
     {
-        public SearchCustomers()
+        public frmMainProducts()
         {
             InitializeComponent();
         }
