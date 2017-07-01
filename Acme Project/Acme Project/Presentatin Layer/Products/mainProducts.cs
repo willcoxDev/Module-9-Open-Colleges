@@ -66,5 +66,67 @@ namespace Acme_Project.Presentatin_Layer.Products
             addProduct.ShowDialog();
             DisplayProducts();
         }
+
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            if (dgvProducts.SelectedRows.Count > 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you wish to delete this Product?", "Product Delete", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+                DataGridViewRow selectedRow = dgvProducts.SelectedRows[0]; //Selecting the row
+                var deleteProduct = (Product)selectedRow.DataBoundItem; //setting deleteProduct to an instance of the Product Class of the selected row.
+
+                //Test to see if the product can be deleted
+
+
+                //Code to check if the product can be deleted using the stored procedure given
+                using (var conn = ConnectionManager.DatabaseConnection())
+                {
+                    using (var cmd = new SqlCommand("sp_Products_AllowDeleteProduct", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("ProductID", deleteProduct.ProductID);
+                        cmd.Parameters.Add("RecordCount", SqlDbType.Int).Direction = ParameterDirection.Output;
+                        cmd.Transaction = conn.BeginTransaction();
+                        cmd.ExecuteNonQuery();
+                        cmd.Transaction.Commit();
+                        int validDelete = Convert.ToInt32(cmd.Parameters["RecordCount"].Value);
+                        if (validDelete == 1)
+                        {
+                            MessageBox.Show("Product can not be deleted.", "Error");
+                            return;
+                        }
+                    }
+                    //Code to delete the product
+                    using (var cmd = new SqlCommand("sp_Products_DeleteProduct", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("ProductID", deleteProduct.ProductID);
+                        cmd.Transaction = conn.BeginTransaction();
+                        cmd.ExecuteNonQuery();
+                        cmd.Transaction.Commit();
+
+                        DisplayProducts(); //Refresh the table
+                    }
+
+                }
+            }
+        }
+
+        private void btnUpdateProduct_Click(object sender, EventArgs e)
+        {
+            if (dgvProducts.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvProducts.SelectedRows[0]; //Selecting the row
+                var updateProduct = (Product)selectedRow.DataBoundItem; //setting deleteCustomer to an instance of the Customer Class of the selected row.
+
+                frmUpdateProduct productsUpdate = new frmUpdateProduct(updateProduct);
+                productsUpdate.ShowDialog();
+                DisplayProducts();
+            }
+        }
     }
 }

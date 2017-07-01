@@ -111,6 +111,12 @@
     <Compile Include="Presentatin Layer\Products\MainProducts.Designer.cs">
       <DependentUpon>MainProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentatin Layer\Products\UpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Products\UpdateProduct.Designer.cs">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentatin Layer\Categories\AddCategory.resx">
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentatin Layer\Products\MainProducts.resx">
       <DependentUpon>MainProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentatin Layer\Products\UpdateProduct.resx">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

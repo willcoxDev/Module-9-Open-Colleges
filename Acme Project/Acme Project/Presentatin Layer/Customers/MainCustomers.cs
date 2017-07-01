@@ -64,44 +64,59 @@ namespace Acme_Project
 
         private void DisplaySearch()
         {
-
-            string selectQuery;
-            selectQuery = "SELECT * FROM Customers";
-            if (rbSearchFirstName.Checked)
-            {
-                selectQuery += " WHERE FirstName = '" + txtSearchFirstName.Text + "'";
-            }
-            if (rbSearchState.Checked)
-            {
-                selectQuery += " WHERE State = '" + cbState.Text + "'";
-            }
+           
             List<Customer> cusList = new List<Customer>();
             try
             {
                 // Automatically  open and close the connection
                 using (var conn = ConnectionManager.DatabaseConnection())
-                using (var cmd = new SqlCommand(selectQuery, conn))
-                using (var rdr = cmd.ExecuteReader())
                 {
-                    while (rdr.Read())
+                    using (var cmd = conn.CreateCommand())
                     {
-                        //Define the list items
-                        var customer = new Customer(
-                            int.Parse(rdr["CustomerID"].ToString()),
-                            int.Parse(rdr["CategoryID"].ToString()),
-                            rdr["FirstName"].ToString(),
-                            rdr["LastName"].ToString(),
-                            rdr["Gender"].ToString(),
-                            rdr["Address"].ToString(),
-                            rdr["Suburb"].ToString(),
-                            rdr["State"].ToString(),
-                            int.Parse(rdr["Postcode"].ToString()),
-                            DateTime.Parse(rdr["BirthDate"].ToString()));
+                        if (rbShowAll.Checked)
+                        {
+                            cmd.CommandText = "SELECT * FROM Customers";
+                        }
+                        if (rbSearchFirstName.Checked)
+                        {
+                            cmd.CommandText = "SELECT * FROM Customers WHERE FirstName = @firstName";
+                        }
+                        if (rbSearchState.Checked)
+                        {
+                            cmd.CommandText = "SELECT * FROM Customers WHERE State = @state";
+                        }
+                        
+                        cmd.Parameters.AddWithValue("firstName", txtSearchFirstName.Text);
+                        cmd.Parameters.AddWithValue("state", cbState.Text);
 
-                        cusList.Add(customer);
+                        cmd.Transaction = conn.BeginTransaction();
+                        cmd.ExecuteNonQuery();
+                        cmd.Transaction.Commit();
+                        using (var rdr = cmd.ExecuteReader())
+                        {
+                            while (rdr.Read())
+                            {
+                                //Define the list items
+                                var customer = new Customer(
+                                    int.Parse(rdr["CustomerID"].ToString()),
+                                    int.Parse(rdr["CategoryID"].ToString()),
+                                    rdr["FirstName"].ToString(),
+                                    rdr["LastName"].ToString(),
+                                    rdr["Gender"].ToString(),
+                                    rdr["Address"].ToString(),
+                                    rdr["Suburb"].ToString(),
+                                    rdr["State"].ToString(),
+                                    int.Parse(rdr["Postcode"].ToString()),
+                                    DateTime.Parse(rdr["BirthDate"].ToString()));
+
+                                cusList.Add(customer);
+                            }
+                            dgvCustomers.DataSource = cusList;
+                        }
                     }
-                    dgvCustomers.DataSource = cusList;
+                    
                 }
+                
             }
             catch (Exception ex)
             {
@@ -133,7 +148,6 @@ namespace Acme_Project
                 frmUpdateCustomers customersUpdate = new frmUpdateCustomers(updateCustomer);
                 customersUpdate.ShowDialog();
                 DisplayCustomers();
-
             }
         }
 

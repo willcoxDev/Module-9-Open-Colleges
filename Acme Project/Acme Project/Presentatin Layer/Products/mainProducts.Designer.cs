@@ -156,6 +156,7 @@
             this.btnDeleteProduct.TabIndex = 5;
             this.btnDeleteProduct.Text = "&Delete Products";
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
+            this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
             // 
             // btnSearchProduct
             // 
@@ -174,6 +175,7 @@
             this.btnUpdateProduct.TabIndex = 4;
             this.btnUpdateProduct.Text = "&Update Products";
             this.btnUpdateProduct.UseVisualStyleBackColor = true;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
             // dgvProducts
             // 
