@@ -82,9 +82,7 @@ namespace Acme_Project
                 }
                 else
                 {
-                    frmCustomers mainCustomers = new frmCustomers();
-                    mainCustomers.Show();
-                    this.Hide();
+                    this.Close();
                 }
 
              } 

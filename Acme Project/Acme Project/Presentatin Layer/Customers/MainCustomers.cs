@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Acme_Project.Data_Access_Layer;
 using Acme_Project.Business_Logic_Layer;
+using Acme_Project.Customers;
 
 namespace Acme_Project
 {
@@ -69,13 +70,22 @@ namespace Acme_Project
         private void btnAddCustomers_Click(object sender, EventArgs e)
         {
             frmAddCustomers customersAdd = new frmAddCustomers();
-            customersAdd.Show();
-            this.Hide();
+            customersAdd.ShowDialog();
+            DisplayCustomers();
         }
 
         private void btnUpdateCustomers_Click(object sender, EventArgs e)
         {
+            if (dgvCustomers.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvCustomers.SelectedRows[0]; //Selecting the row
+                var updateCustomer = (Customer)selectedRow.DataBoundItem; //setting deleteCustomer to an instance of the Customer Class of the selected row.
+                
+                frmUpdateCustomers customersUpdate = new frmUpdateCustomers(updateCustomer);
+                customersUpdate.ShowDialog();
+                DisplayCustomers();
 
+            }
         }
 
         private void btnDeleteCustomers_Click(object sender, EventArgs e)
@@ -93,7 +103,7 @@ namespace Acme_Project
                 //Test to see if the customer can be deleted
 
 
-                //Code to delete the Customer
+                //Code to check if the customer can be deleted using the stored procedure given
                 using (var conn = ConnectionManager.DatabaseConnection())
                 {
                     using (var cmd = new SqlCommand("sp_Customers_AllowDeleteCustomer", conn))
@@ -111,6 +121,7 @@ namespace Acme_Project
                             return;
                         }
                     }
+                    //Code to delete the customer
                     using (var cmd = new SqlCommand("sp_Customers_DeleteCustomer", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;

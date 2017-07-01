@@ -32,17 +32,6 @@
             this.btnSearchCustomers = new System.Windows.Forms.Button();
             this.btnUpdateCustomers = new System.Windows.Forms.Button();
             this.btnDeleteCustomers = new System.Windows.Forms.Button();
-            this.lvCustomers = new System.Windows.Forms.ListView();
-            this.customerID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.categoryID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.firstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.suburb = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.state = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.postcode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.gender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.birthDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,7 +60,7 @@
             // 
             // btnSearchCustomers
             // 
-            this.btnSearchCustomers.Location = new System.Drawing.Point(384, 46);
+            this.btnSearchCustomers.Location = new System.Drawing.Point(367, 46);
             this.btnSearchCustomers.Name = "btnSearchCustomers";
             this.btnSearchCustomers.Size = new System.Drawing.Size(105, 23);
             this.btnSearchCustomers.TabIndex = 3;
@@ -80,7 +69,7 @@
             // 
             // btnUpdateCustomers
             // 
-            this.btnUpdateCustomers.Location = new System.Drawing.Point(273, 46);
+            this.btnUpdateCustomers.Location = new System.Drawing.Point(256, 46);
             this.btnUpdateCustomers.Name = "btnUpdateCustomers";
             this.btnUpdateCustomers.Size = new System.Drawing.Size(105, 23);
             this.btnUpdateCustomers.TabIndex = 4;
@@ -97,79 +86,6 @@
             this.btnDeleteCustomers.Text = "&Delete Customers";
             this.btnDeleteCustomers.UseVisualStyleBackColor = true;
             this.btnDeleteCustomers.Click += new System.EventHandler(this.btnDeleteCustomers_Click);
-            // 
-            // lvCustomers
-            // 
-            this.lvCustomers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.customerID,
-            this.categoryID,
-            this.firstName,
-            this.lastName,
-            this.address,
-            this.suburb,
-            this.state,
-            this.postcode,
-            this.gender,
-            this.birthDate});
-            this.lvCustomers.FullRowSelect = true;
-            this.lvCustomers.GridLines = true;
-            this.lvCustomers.HideSelection = false;
-            this.lvCustomers.Location = new System.Drawing.Point(53, 66);
-            this.lvCustomers.Name = "lvCustomers";
-            this.lvCustomers.Size = new System.Drawing.Size(805, 73);
-            this.lvCustomers.TabIndex = 6;
-            this.lvCustomers.UseCompatibleStateImageBehavior = false;
-            this.lvCustomers.View = System.Windows.Forms.View.Details;
-            // 
-            // customerID
-            // 
-            this.customerID.Text = "Customer ID";
-            this.customerID.Width = 80;
-            // 
-            // categoryID
-            // 
-            this.categoryID.Text = "Category ID";
-            this.categoryID.Width = 80;
-            // 
-            // firstName
-            // 
-            this.firstName.Text = "First Name";
-            this.firstName.Width = 80;
-            // 
-            // lastName
-            // 
-            this.lastName.Text = "Last Name";
-            this.lastName.Width = 80;
-            // 
-            // address
-            // 
-            this.address.Text = "Address";
-            this.address.Width = 80;
-            // 
-            // suburb
-            // 
-            this.suburb.Text = "Suburb";
-            this.suburb.Width = 80;
-            // 
-            // state
-            // 
-            this.state.Text = "State";
-            this.state.Width = 80;
-            // 
-            // postcode
-            // 
-            this.postcode.Text = "Postcode";
-            this.postcode.Width = 80;
-            // 
-            // gender
-            // 
-            this.gender.Text = "Gender";
-            this.gender.Width = 80;
-            // 
-            // birthDate
-            // 
-            this.birthDate.Text = "Birth Date";
-            this.birthDate.Width = 80;
             // 
             // panel1
             // 
@@ -274,7 +190,6 @@
             this.ClientSize = new System.Drawing.Size(934, 611);
             this.Controls.Add(this.dgvCustomers);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lvCustomers);
             this.Name = "frmCustomers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customers";
@@ -291,17 +206,6 @@
         private System.Windows.Forms.Button btnSearchCustomers;
         private System.Windows.Forms.Button btnUpdateCustomers;
         private System.Windows.Forms.Button btnDeleteCustomers;
-        private System.Windows.Forms.ListView lvCustomers;
-        private System.Windows.Forms.ColumnHeader customerID;
-        private System.Windows.Forms.ColumnHeader categoryID;
-        private System.Windows.Forms.ColumnHeader firstName;
-        private System.Windows.Forms.ColumnHeader lastName;
-        private System.Windows.Forms.ColumnHeader address;
-        private System.Windows.Forms.ColumnHeader suburb;
-        private System.Windows.Forms.ColumnHeader state;
-        private System.Windows.Forms.ColumnHeader postcode;
-        private System.Windows.Forms.ColumnHeader gender;
-        private System.Windows.Forms.ColumnHeader birthDate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

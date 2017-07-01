@@ -1,6 +1,6 @@
 ﻿namespace Acme_Project.Customers
 {
-    partial class UpdateCustomers
+    partial class frmUpdateCustomers
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAddCustomer = new System.Windows.Forms.Button();
+            this.btnUpdateCustomer = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
@@ -58,14 +58,15 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnAddCustomer
+            // btnUpdateCustomer
             // 
-            this.btnAddCustomer.Location = new System.Drawing.Point(551, 305);
-            this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(127, 23);
-            this.btnAddCustomer.TabIndex = 23;
-            this.btnAddCustomer.Text = "Update Customer";
-            this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnUpdateCustomer.Location = new System.Drawing.Point(551, 305);
+            this.btnUpdateCustomer.Name = "btnUpdateCustomer";
+            this.btnUpdateCustomer.Size = new System.Drawing.Size(127, 23);
+            this.btnUpdateCustomer.TabIndex = 23;
+            this.btnUpdateCustomer.Text = "Update Customer";
+            this.btnUpdateCustomer.UseVisualStyleBackColor = true;
+            this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
             // 
             // groupBox2
             // 
@@ -274,9 +275,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(17, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Category ID";
+            this.label4.Text = "Category ";
             // 
             // label3
             // 
@@ -305,16 +306,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name";
             // 
-            // UpdateCustomers
+            // frmUpdateCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.btnAddCustomer);
+            this.Controls.Add(this.btnUpdateCustomer);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Name = "UpdateCustomers";
+            this.Name = "frmUpdateCustomers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Customers";
             this.groupBox2.ResumeLayout(false);
@@ -329,7 +330,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnAddCustomer;
+        private System.Windows.Forms.Button btnUpdateCustomer;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtCustomerID;

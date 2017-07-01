@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Acme_Project.Business_Logic_Layer
 {
-    class Customer
+    public class Customer
     {
-   
         //Set-Get properties
         public int CustomerID { get; set; }
 
