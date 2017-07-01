@@ -33,6 +33,12 @@
             this.btnUpdateCustomers = new System.Windows.Forms.Button();
             this.btnDeleteCustomers = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.grpSearch = new System.Windows.Forms.GroupBox();
+            this.cbState = new System.Windows.Forms.ComboBox();
+            this.txtSearchFirstName = new System.Windows.Forms.TextBox();
+            this.rbSearchFirstName = new System.Windows.Forms.RadioButton();
+            this.rbShowAll = new System.Windows.Forms.RadioButton();
+            this.rbSearchState = new System.Windows.Forms.RadioButton();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,15 +50,9 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rbSearchFirstName = new System.Windows.Forms.RadioButton();
-            this.rbShowAll = new System.Windows.Forms.RadioButton();
-            this.rbSearchState = new System.Windows.Forms.RadioButton();
-            this.txtSearchFirstName = new System.Windows.Forms.TextBox();
-            this.grpSearch = new System.Windows.Forms.GroupBox();
-            this.cbState = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.grpSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddCustomers
@@ -107,6 +107,76 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(934, 112);
             this.panel1.TabIndex = 7;
+            // 
+            // grpSearch
+            // 
+            this.grpSearch.Controls.Add(this.cbState);
+            this.grpSearch.Controls.Add(this.txtSearchFirstName);
+            this.grpSearch.Controls.Add(this.rbSearchFirstName);
+            this.grpSearch.Controls.Add(this.rbShowAll);
+            this.grpSearch.Controls.Add(this.rbSearchState);
+            this.grpSearch.Location = new System.Drawing.Point(478, 3);
+            this.grpSearch.Name = "grpSearch";
+            this.grpSearch.Size = new System.Drawing.Size(219, 106);
+            this.grpSearch.TabIndex = 11;
+            this.grpSearch.TabStop = false;
+            this.grpSearch.Text = "Search Parameters";
+            // 
+            // cbState
+            // 
+            this.cbState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbState.FormattingEnabled = true;
+            this.cbState.Items.AddRange(new object[] {
+            "SA",
+            "VIC",
+            "NSW",
+            "QLD",
+            "NT",
+            "WA",
+            "TAS"});
+            this.cbState.Location = new System.Drawing.Point(109, 76);
+            this.cbState.Name = "cbState";
+            this.cbState.Size = new System.Drawing.Size(100, 21);
+            this.cbState.TabIndex = 19;
+            // 
+            // txtSearchFirstName
+            // 
+            this.txtSearchFirstName.Location = new System.Drawing.Point(109, 45);
+            this.txtSearchFirstName.Name = "txtSearchFirstName";
+            this.txtSearchFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtSearchFirstName.TabIndex = 9;
+            // 
+            // rbSearchFirstName
+            // 
+            this.rbSearchFirstName.AutoSize = true;
+            this.rbSearchFirstName.Location = new System.Drawing.Point(8, 47);
+            this.rbSearchFirstName.Name = "rbSearchFirstName";
+            this.rbSearchFirstName.Size = new System.Drawing.Size(78, 17);
+            this.rbSearchFirstName.TabIndex = 6;
+            this.rbSearchFirstName.Text = "First Name:";
+            this.rbSearchFirstName.UseVisualStyleBackColor = true;
+            // 
+            // rbShowAll
+            // 
+            this.rbShowAll.AutoSize = true;
+            this.rbShowAll.Checked = true;
+            this.rbShowAll.Location = new System.Drawing.Point(8, 15);
+            this.rbShowAll.Name = "rbShowAll";
+            this.rbShowAll.Size = new System.Drawing.Size(117, 17);
+            this.rbShowAll.TabIndex = 7;
+            this.rbShowAll.TabStop = true;
+            this.rbShowAll.Text = "Show all Customers";
+            this.rbShowAll.UseVisualStyleBackColor = true;
+            // 
+            // rbSearchState
+            // 
+            this.rbSearchState.AutoSize = true;
+            this.rbSearchState.Location = new System.Drawing.Point(8, 79);
+            this.rbSearchState.Name = "rbSearchState";
+            this.rbSearchState.Size = new System.Drawing.Size(53, 17);
+            this.rbSearchState.TabIndex = 8;
+            this.rbSearchState.Text = "State:";
+            this.rbSearchState.UseVisualStyleBackColor = true;
             // 
             // dgvCustomers
             // 
@@ -192,75 +262,6 @@
             this.Column10.HeaderText = "Birth Date";
             this.Column10.Name = "Column10";
             // 
-            // rbSearchFirstName
-            // 
-            this.rbSearchFirstName.AutoSize = true;
-            this.rbSearchFirstName.Location = new System.Drawing.Point(8, 47);
-            this.rbSearchFirstName.Name = "rbSearchFirstName";
-            this.rbSearchFirstName.Size = new System.Drawing.Size(75, 17);
-            this.rbSearchFirstName.TabIndex = 6;
-            this.rbSearchFirstName.Text = "First Name";
-            this.rbSearchFirstName.UseVisualStyleBackColor = true;
-            // 
-            // rbShowAll
-            // 
-            this.rbShowAll.AutoSize = true;
-            this.rbShowAll.Checked = true;
-            this.rbShowAll.Location = new System.Drawing.Point(8, 15);
-            this.rbShowAll.Name = "rbShowAll";
-            this.rbShowAll.Size = new System.Drawing.Size(117, 17);
-            this.rbShowAll.TabIndex = 7;
-            this.rbShowAll.TabStop = true;
-            this.rbShowAll.Text = "Show all Customers";
-            this.rbShowAll.UseVisualStyleBackColor = true;
-            // 
-            // rbSearchState
-            // 
-            this.rbSearchState.AutoSize = true;
-            this.rbSearchState.Location = new System.Drawing.Point(8, 79);
-            this.rbSearchState.Name = "rbSearchState";
-            this.rbSearchState.Size = new System.Drawing.Size(50, 17);
-            this.rbSearchState.TabIndex = 8;
-            this.rbSearchState.Text = "State";
-            this.rbSearchState.UseVisualStyleBackColor = true;
-            // 
-            // txtSearchFirstName
-            // 
-            this.txtSearchFirstName.Location = new System.Drawing.Point(109, 45);
-            this.txtSearchFirstName.Name = "txtSearchFirstName";
-            this.txtSearchFirstName.Size = new System.Drawing.Size(100, 20);
-            this.txtSearchFirstName.TabIndex = 9;
-            // 
-            // grpSearch
-            // 
-            this.grpSearch.Controls.Add(this.cbState);
-            this.grpSearch.Controls.Add(this.txtSearchFirstName);
-            this.grpSearch.Controls.Add(this.rbSearchFirstName);
-            this.grpSearch.Controls.Add(this.rbShowAll);
-            this.grpSearch.Controls.Add(this.rbSearchState);
-            this.grpSearch.Location = new System.Drawing.Point(478, 3);
-            this.grpSearch.Name = "grpSearch";
-            this.grpSearch.Size = new System.Drawing.Size(219, 106);
-            this.grpSearch.TabIndex = 11;
-            this.grpSearch.TabStop = false;
-            this.grpSearch.Text = "Search Parameters";
-            // 
-            // cbState
-            // 
-            this.cbState.FormattingEnabled = true;
-            this.cbState.Items.AddRange(new object[] {
-            "SA",
-            "VIC",
-            "NSW",
-            "QLD",
-            "NT",
-            "WA",
-            "TAS"});
-            this.cbState.Location = new System.Drawing.Point(109, 76);
-            this.cbState.Name = "cbState";
-            this.cbState.Size = new System.Drawing.Size(100, 21);
-            this.cbState.TabIndex = 19;
-            // 
             // frmCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,9 +274,9 @@
             this.Text = "Customers";
             this.Load += new System.EventHandler(this.frmCustomers_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.grpSearch.ResumeLayout(false);
             this.grpSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.ResumeLayout(false);
 
         }

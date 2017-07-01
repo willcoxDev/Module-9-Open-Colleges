@@ -30,7 +30,7 @@ namespace Acme_Project
                     gender = "F";
                 }
                 //Create an object of the customer class.
-                var newCustomer = new Customer(int.Parse(txtCustomerID.Text),
+                var newCustomer = new Customer(0,
                     (cbCategoryID.SelectedIndex) + 1,
                     txtFirstName.Text,
                     txtLastName.Text,
@@ -89,7 +89,7 @@ namespace Acme_Project
         }
         //Validate all the input, Show Error message box with with the problem the user has.
         private bool validateInput()
-        {
+        { 
             if(String.IsNullOrEmpty(txtFirstName.Text))
             {
                 MessageBox.Show("Please enter the first name.");
@@ -145,13 +145,14 @@ namespace Acme_Project
                 MessageBox.Show("Postcode must be an number.");
                 return false;
             }
+            /* Since it is the primary key no need to use
             int parsedCustomerID;
             if (!int.TryParse(txtCustomerID.Text, out parsedCustomerID))
             {
                 MessageBox.Show("Customer ID must be an number.");
                 return false;
             }
-
+            */
             
             return true;
         }

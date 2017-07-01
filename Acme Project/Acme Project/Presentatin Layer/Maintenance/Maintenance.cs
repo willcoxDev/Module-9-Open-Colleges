@@ -11,8 +11,7 @@ using Acme_Project.Data_Access_Layer;
 using Acme_Project.Business_Logic_Layer;
 using Acme_Project.Customers;
 using Acme_Project.Categories;
-
-
+using Acme_Project.Presentatin_Layer.Products;
 
 namespace Acme_Project.Presentatin_Layer
 {
@@ -31,7 +30,8 @@ namespace Acme_Project.Presentatin_Layer
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            
+            frmMainProducts mainProducts = new frmMainProducts();
+            mainProducts.ShowDialog();
         }
     }
 }
