@@ -158,5 +158,12 @@ namespace Acme_Project.Presentatin_Layer.Sales
 
             }
         }
+
+        private void btnAddSales_Click(object sender, EventArgs e)
+        {
+            frmAddSales addSales = new frmAddSales();
+            addSales.ShowDialog();
+            DisplaySales();
+        }
     }
 }

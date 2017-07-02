@@ -191,6 +191,7 @@
             this.dgvProducts.Location = new System.Drawing.Point(0, 0);
             this.dgvProducts.MultiSelect = false;
             this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.ReadOnly = true;
             this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProducts.Size = new System.Drawing.Size(934, 499);
             this.dgvProducts.TabIndex = 9;
@@ -200,24 +201,28 @@
             this.ProductID.DataPropertyName = "ProductID";
             this.ProductID.HeaderText = "Product ID";
             this.ProductID.Name = "ProductID";
+            this.ProductID.ReadOnly = true;
             // 
             // ProductType
             // 
             this.ProductType.DataPropertyName = "ProductTypeID";
             this.ProductType.HeaderText = "Product Type";
             this.ProductType.Name = "ProductType";
+            this.ProductType.ReadOnly = true;
             // 
             // ProductName
             // 
             this.ProductName.DataPropertyName = "ProductName";
             this.ProductName.HeaderText = "Product Name";
             this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
             // 
             // YearlyPremium
             // 
             this.YearlyPremium.DataPropertyName = "YearlyPremium";
             this.YearlyPremium.HeaderText = "Yearly Premium";
             this.YearlyPremium.Name = "YearlyPremium";
+            this.YearlyPremium.ReadOnly = true;
             // 
             // frmMainProducts
             // 

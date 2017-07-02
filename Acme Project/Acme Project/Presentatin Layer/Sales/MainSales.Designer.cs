@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.grpSearch = new System.Windows.Forms.GroupBox();
+            this.txtSearchProductID = new System.Windows.Forms.TextBox();
             this.txtSearchSaleID = new System.Windows.Forms.TextBox();
             this.rbSearchSaleID = new System.Windows.Forms.RadioButton();
             this.rbShowAll = new System.Windows.Forms.RadioButton();
@@ -44,7 +45,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSearchProductID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.grpSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSales)).BeginInit();
@@ -76,6 +76,13 @@
             this.grpSearch.TabIndex = 11;
             this.grpSearch.TabStop = false;
             this.grpSearch.Text = "Search Parameters";
+            // 
+            // txtSearchProductID
+            // 
+            this.txtSearchProductID.Location = new System.Drawing.Point(109, 78);
+            this.txtSearchProductID.Name = "txtSearchProductID";
+            this.txtSearchProductID.Size = new System.Drawing.Size(100, 20);
+            this.txtSearchProductID.TabIndex = 10;
             // 
             // txtSearchSaleID
             // 
@@ -124,6 +131,7 @@
             this.btnAddSales.TabIndex = 0;
             this.btnAddSales.Text = "&Add Sales";
             this.btnAddSales.UseVisualStyleBackColor = true;
+            this.btnAddSales.Click += new System.EventHandler(this.btnAddSales_Click);
             // 
             // btnDeleteSales
             // 
@@ -168,6 +176,7 @@
             this.dgvSales.Location = new System.Drawing.Point(0, 0);
             this.dgvSales.MultiSelect = false;
             this.dgvSales.Name = "dgvSales";
+            this.dgvSales.ReadOnly = true;
             this.dgvSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSales.Size = new System.Drawing.Size(934, 499);
             this.dgvSales.TabIndex = 9;
@@ -177,37 +186,35 @@
             this.Column1.DataPropertyName = "SaleID";
             this.Column1.HeaderText = "Sale ID";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "CustomerID";
             this.Column2.HeaderText = "Customer ID";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "ProductID";
             this.Column3.HeaderText = "Product ID";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.DataPropertyName = "Payable";
             this.Column4.HeaderText = "Payable";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.DataPropertyName = "StartDate";
             this.Column5.HeaderText = "Start Date";
             this.Column5.Name = "Column5";
-            // 
-            // txtSearchProductID
-            // 
-            this.txtSearchProductID.Location = new System.Drawing.Point(109, 78);
-            this.txtSearchProductID.Name = "txtSearchProductID";
-            this.txtSearchProductID.Size = new System.Drawing.Size(100, 20);
-            this.txtSearchProductID.TabIndex = 10;
+            this.Column5.ReadOnly = true;
             // 
             // frmMainSales
             // 

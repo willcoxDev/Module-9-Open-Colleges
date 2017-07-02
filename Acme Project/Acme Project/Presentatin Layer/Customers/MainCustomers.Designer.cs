@@ -197,6 +197,7 @@
             this.dgvCustomers.Location = new System.Drawing.Point(0, 0);
             this.dgvCustomers.MultiSelect = false;
             this.dgvCustomers.Name = "dgvCustomers";
+            this.dgvCustomers.ReadOnly = true;
             this.dgvCustomers.RowTemplate.ReadOnly = true;
             this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCustomers.Size = new System.Drawing.Size(934, 499);
@@ -207,60 +208,70 @@
             this.Column1.DataPropertyName = "CustomerID";
             this.Column1.HeaderText = "Customer ID";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "CategoryID";
             this.Column2.HeaderText = "Category ID";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "FirstName";
             this.Column3.HeaderText = "First Name";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.DataPropertyName = "LastName";
             this.Column4.HeaderText = "Last Name";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.DataPropertyName = "Address";
             this.Column5.HeaderText = "Address";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.DataPropertyName = "Suburb";
             this.Column6.HeaderText = "Suburb";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
             this.Column7.DataPropertyName = "State";
             this.Column7.HeaderText = "State";
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // Column8
             // 
             this.Column8.DataPropertyName = "Postcode";
             this.Column8.HeaderText = "Postcode";
             this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
             // Column9
             // 
             this.Column9.DataPropertyName = "Gender";
             this.Column9.HeaderText = "Gender";
             this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             // 
             // Column10
             // 
             this.Column10.DataPropertyName = "BirthDate";
             this.Column10.HeaderText = "Birth Date";
             this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             // 
             // frmCustomers
             // 
