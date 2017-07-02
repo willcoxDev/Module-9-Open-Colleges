@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Acme_Project.Business_Logic_Layer
 {
-    class Sales
+    class Sale
     {
         //Declare properties of a Customer
 
@@ -18,10 +18,10 @@ namespace Acme_Project.Business_Logic_Layer
 
 
         //Declaring Default Constructor
-        public Sales() { }
+        public Sale() { }
 
         //Parameterised Constructor
-        public Sales(int saleid, int customerid, int productid, string payable, DateTime startdate)
+        public Sale(int saleid, int customerid, int productid, string payable, DateTime startdate)
         {
             SaleID = saleid;
             CustomerID = customerid;

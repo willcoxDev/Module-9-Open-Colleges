@@ -74,6 +74,7 @@
             this.btnCategories.TabIndex = 3;
             this.btnCategories.Text = "Categories";
             this.btnCategories.UseVisualStyleBackColor = true;
+            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
             // 
             // btnSales
             // 
@@ -83,6 +84,7 @@
             this.btnSales.TabIndex = 4;
             this.btnSales.Text = "Sales";
             this.btnSales.UseVisualStyleBackColor = true;
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
             // 
             // btnTutorial
             // 

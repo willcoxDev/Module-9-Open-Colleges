@@ -194,14 +194,7 @@ namespace Acme_Project.Presentatin_Layer.Products
 
         private void btnSearchProduct_Click(object sender, EventArgs e)
         {
-            if (rbShowAll.Checked)
-            {
-                DisplayProducts();
-            }
-            if (rbSearchProductName.Checked || rbSearchYearlyPremium.Checked)
-            {
-                DisplaySearch();
-            }
+            DisplaySearch();
         }
     }
 }

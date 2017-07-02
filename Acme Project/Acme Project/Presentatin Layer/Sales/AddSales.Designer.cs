@@ -1,6 +1,6 @@
-﻿namespace Acme_Project.Categories
+﻿namespace Acme_Project.Presentatin_Layer.Sales
 {
-    partial class SearchCategory
+    partial class frmAddSales
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // SearchCategory
+            // frmAddSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Name = "SearchCategory";
+            this.Name = "frmAddSales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Search Category";
+            this.Text = "Add Sales";
             this.ResumeLayout(false);
 
         }

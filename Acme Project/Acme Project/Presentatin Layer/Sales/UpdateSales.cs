@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Acme_Project.Categories
+namespace Acme_Project.Presentatin_Layer.Sales
 {
-    public partial class Categories : Form
+    public partial class frmUpdateSales : Form
     {
-        public Categories()
+        public frmUpdateSales()
         {
             InitializeComponent();
         }

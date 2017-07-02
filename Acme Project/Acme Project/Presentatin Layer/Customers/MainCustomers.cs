@@ -213,14 +213,7 @@ namespace Acme_Project
         //Executes a specific function depending on which radio button is checked in search parameters.
         private void btnSearchCustomers_Click(object sender, EventArgs e)
         {
-            if (rbShowAll.Checked)
-            {
-                DisplayCustomers();
-            }
-            if (rbSearchFirstName.Checked || rbSearchState.Checked)
-            {
-                DisplaySearch();
-            }
+            DisplaySearch();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Acme_Project.Categories
 {
-    public partial class SearchCategory : Form
+    public partial class frmMainCategories : Form
     {
-        public SearchCategory()
+        public frmMainCategories()
         {
             InitializeComponent();
         }

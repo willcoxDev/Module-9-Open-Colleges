@@ -56,17 +56,11 @@
     <Compile Include="Presentatin Layer\Categories\AddCategory.Designer.cs">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentatin Layer\Categories\Categories.cs">
+    <Compile Include="Presentatin Layer\Categories\MainCategories.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Categories\Categories.Designer.cs">
-      <DependentUpon>Categories.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentatin Layer\Categories\SearchCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentatin Layer\Categories\SearchCategory.Designer.cs">
-      <DependentUpon>SearchCategory.cs</DependentUpon>
+    <Compile Include="Presentatin Layer\Categories\MainCategories.Designer.cs">
+      <DependentUpon>MainCategories.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentatin Layer\Categories\UpdateCategory.cs">
       <SubType>Form</SubType>
@@ -117,16 +111,31 @@
     <Compile Include="Presentatin Layer\Products\UpdateProduct.Designer.cs">
       <DependentUpon>UpdateProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentatin Layer\Sales\AddSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Sales\AddSales.Designer.cs">
+      <DependentUpon>AddSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentatin Layer\Sales\MainSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Sales\MainSales.Designer.cs">
+      <DependentUpon>MainSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentatin Layer\Sales\UpdateSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentatin Layer\Sales\UpdateSales.Designer.cs">
+      <DependentUpon>UpdateSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentatin Layer\Categories\AddCategory.resx">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Categories\Categories.resx">
-      <DependentUpon>Categories.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Categories\SearchCategory.resx">
-      <DependentUpon>SearchCategory.cs</DependentUpon>
+    <EmbeddedResource Include="Presentatin Layer\Categories\MainCategories.resx">
+      <DependentUpon>MainCategories.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentatin Layer\Categories\UpdateCategory.resx">
       <DependentUpon>UpdateCategory.cs</DependentUpon>
@@ -151,6 +160,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentatin Layer\Products\UpdateProduct.resx">
       <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentatin Layer\Sales\AddSales.resx">
+      <DependentUpon>AddSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentatin Layer\Sales\MainSales.resx">
+      <DependentUpon>MainSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentatin Layer\Sales\UpdateSales.resx">
+      <DependentUpon>UpdateSales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -177,7 +195,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Presentatin Layer\ProductTypes\" />
-    <Folder Include="Presentatin Layer\Sales\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

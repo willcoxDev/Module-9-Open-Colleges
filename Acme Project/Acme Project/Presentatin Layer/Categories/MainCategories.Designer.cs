@@ -1,6 +1,6 @@
 ﻿namespace Acme_Project.Categories
 {
-    partial class Categories
+    partial class frmMainCategories
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // Categories
+            // frmMainCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Name = "Categories";
+            this.Name = "frmMainCategories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Categories";
             this.ResumeLayout(false);
