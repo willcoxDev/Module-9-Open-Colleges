@@ -196,10 +196,7 @@ namespace Acme_Project
 
                         DisplayCustomers(); //Refresh the table
                     }
-
                 }
-
-
             }
             else
             {

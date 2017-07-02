@@ -35,12 +35,22 @@
             this.dgvCategories = new System.Windows.Forms.DataGridView();
             this.CategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grpSearch = new System.Windows.Forms.GroupBox();
+            this.txtSearchCategory = new System.Windows.Forms.TextBox();
+            this.txtSearchCategoryID = new System.Windows.Forms.TextBox();
+            this.rbSearchCategoryID = new System.Windows.Forms.RadioButton();
+            this.rbShowAll = new System.Windows.Forms.RadioButton();
+            this.rbSearchCategory = new System.Windows.Forms.RadioButton();
+            this.btnSearchCategories = new System.Windows.Forms.Button();
             this.pnlCategories.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).BeginInit();
+            this.grpSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCategories
             // 
+            this.pnlCategories.Controls.Add(this.grpSearch);
+            this.pnlCategories.Controls.Add(this.btnSearchCategories);
             this.pnlCategories.Controls.Add(this.btnAddCategories);
             this.pnlCategories.Controls.Add(this.btnDeleteCategories);
             this.pnlCategories.Controls.Add(this.btnUpdateCategories);
@@ -78,6 +88,7 @@
             this.btnUpdateCategories.TabIndex = 4;
             this.btnUpdateCategories.Text = "Update Category";
             this.btnUpdateCategories.UseVisualStyleBackColor = true;
+            this.btnUpdateCategories.Click += new System.EventHandler(this.btnUpdateCategories_Click);
             // 
             // dgvCategories
             // 
@@ -109,6 +120,76 @@
             this.Category.Name = "Category";
             this.Category.ReadOnly = true;
             // 
+            // grpSearch
+            // 
+            this.grpSearch.Controls.Add(this.txtSearchCategory);
+            this.grpSearch.Controls.Add(this.txtSearchCategoryID);
+            this.grpSearch.Controls.Add(this.rbSearchCategoryID);
+            this.grpSearch.Controls.Add(this.rbShowAll);
+            this.grpSearch.Controls.Add(this.rbSearchCategory);
+            this.grpSearch.Location = new System.Drawing.Point(478, 3);
+            this.grpSearch.Name = "grpSearch";
+            this.grpSearch.Size = new System.Drawing.Size(219, 106);
+            this.grpSearch.TabIndex = 13;
+            this.grpSearch.TabStop = false;
+            this.grpSearch.Text = "Search Parameters";
+            // 
+            // txtSearchCategory
+            // 
+            this.txtSearchCategory.Location = new System.Drawing.Point(109, 78);
+            this.txtSearchCategory.Name = "txtSearchCategory";
+            this.txtSearchCategory.Size = new System.Drawing.Size(100, 20);
+            this.txtSearchCategory.TabIndex = 10;
+            // 
+            // txtSearchCategoryID
+            // 
+            this.txtSearchCategoryID.Location = new System.Drawing.Point(109, 46);
+            this.txtSearchCategoryID.Name = "txtSearchCategoryID";
+            this.txtSearchCategoryID.Size = new System.Drawing.Size(100, 20);
+            this.txtSearchCategoryID.TabIndex = 9;
+            // 
+            // rbSearchCategoryID
+            // 
+            this.rbSearchCategoryID.AutoSize = true;
+            this.rbSearchCategoryID.Location = new System.Drawing.Point(8, 47);
+            this.rbSearchCategoryID.Name = "rbSearchCategoryID";
+            this.rbSearchCategoryID.Size = new System.Drawing.Size(84, 17);
+            this.rbSearchCategoryID.TabIndex = 6;
+            this.rbSearchCategoryID.Text = "Category ID:";
+            this.rbSearchCategoryID.UseVisualStyleBackColor = true;
+            // 
+            // rbShowAll
+            // 
+            this.rbShowAll.AutoSize = true;
+            this.rbShowAll.Checked = true;
+            this.rbShowAll.Location = new System.Drawing.Point(8, 15);
+            this.rbShowAll.Name = "rbShowAll";
+            this.rbShowAll.Size = new System.Drawing.Size(94, 17);
+            this.rbShowAll.TabIndex = 7;
+            this.rbShowAll.TabStop = true;
+            this.rbShowAll.Text = "Show all Sales";
+            this.rbShowAll.UseVisualStyleBackColor = true;
+            // 
+            // rbSearchCategory
+            // 
+            this.rbSearchCategory.AutoSize = true;
+            this.rbSearchCategory.Location = new System.Drawing.Point(8, 79);
+            this.rbSearchCategory.Name = "rbSearchCategory";
+            this.rbSearchCategory.Size = new System.Drawing.Size(84, 17);
+            this.rbSearchCategory.TabIndex = 8;
+            this.rbSearchCategory.Text = "Category ID:";
+            this.rbSearchCategory.UseVisualStyleBackColor = true;
+            // 
+            // btnSearchCategories
+            // 
+            this.btnSearchCategories.Location = new System.Drawing.Point(367, 46);
+            this.btnSearchCategories.Name = "btnSearchCategories";
+            this.btnSearchCategories.Size = new System.Drawing.Size(105, 23);
+            this.btnSearchCategories.TabIndex = 12;
+            this.btnSearchCategories.Text = "&Search Sales";
+            this.btnSearchCategories.UseVisualStyleBackColor = true;
+            this.btnSearchCategories.Click += new System.EventHandler(this.btnSearchCategories_Click);
+            // 
             // frmMainCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,6 +203,8 @@
             this.Load += new System.EventHandler(this.frmMainCategories_Load);
             this.pnlCategories.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
+            this.grpSearch.ResumeLayout(false);
+            this.grpSearch.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -135,5 +218,12 @@
         private System.Windows.Forms.DataGridView dgvCategories;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.GroupBox grpSearch;
+        private System.Windows.Forms.TextBox txtSearchCategory;
+        private System.Windows.Forms.TextBox txtSearchCategoryID;
+        private System.Windows.Forms.RadioButton rbSearchCategoryID;
+        private System.Windows.Forms.RadioButton rbShowAll;
+        private System.Windows.Forms.RadioButton rbSearchCategory;
+        private System.Windows.Forms.Button btnSearchCategories;
     }
 }

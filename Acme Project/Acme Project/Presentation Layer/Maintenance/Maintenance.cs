@@ -13,6 +13,7 @@ using Acme_Project.Customers;
 using Acme_Project.Categories;
 using Acme_Project.Presentatin_Layer.Products;
 using Acme_Project.Presentatin_Layer.Sales;
+using Acme_Project.Presentation_Layer.ProductTypes;
 
 namespace Acme_Project.Presentatin_Layer
 {
@@ -45,6 +46,12 @@ namespace Acme_Project.Presentatin_Layer
         {
             frmMainCategories mainCategories = new frmMainCategories();
             mainCategories.ShowDialog();
+        }
+
+        private void btnProductTypes_Click(object sender, EventArgs e)
+        {
+            frmMainProductTypes mainProductTypes = new frmMainProductTypes();
+            mainProductTypes.ShowDialog();
         }
     }
 }

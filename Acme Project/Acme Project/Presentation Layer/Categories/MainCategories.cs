@@ -117,6 +117,71 @@ namespace Acme_Project.Categories
             }
         }
 
-        
+        private void btnUpdateCategories_Click(object sender, EventArgs e)
+        {
+            if (dgvCategories.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvCategories.SelectedRows[0]; //Selecting the row
+                var updateCustomer = (_Category)selectedRow.DataBoundItem; //setting deleteCategory to an instance of the Category Class of the selected row.
+
+                frmUpdateCategory categoryUpdate = new frmUpdateCategory(updateCustomer);
+                categoryUpdate.ShowDialog();
+                DisplayCategories();
+            }
+        }
+
+        private void btnSearchCategories_Click(object sender, EventArgs e)
+        {
+            List<_Category> catList = new List<_Category>();
+            try
+            {
+                // Automatically  open and close the connection
+                using (var conn = ConnectionManager.DatabaseConnection())
+                {
+                    using (var cmd = conn.CreateCommand())
+                    {
+                        if (rbShowAll.Checked)
+                        {
+                            cmd.CommandText = "SELECT * FROM Categories";
+                        }
+                        if (rbSearchCategoryID.Checked)
+                        {
+                            cmd.CommandText = "SELECT * FROM Categories WHERE CategoryID = @categoryid";
+                        }
+                        if (rbSearchCategory.Checked)
+                        {
+                            cmd.CommandText = "SELECT * FROM Categories WHERE Category = @category";
+                        }
+
+                        cmd.Parameters.AddWithValue("categoryid", txtSearchCategoryID.Text);
+                        cmd.Parameters.AddWithValue("category", txtSearchCategory.Text);
+
+                        cmd.Transaction = conn.BeginTransaction();
+                        cmd.ExecuteNonQuery();
+                        cmd.Transaction.Commit();
+                        using (var rdr = cmd.ExecuteReader())
+                        {
+                            while (rdr.Read())
+                            {
+                                //Define the list items
+                                var category = new _Category(
+                                int.Parse(rdr["CategoryID"].ToString()),
+                                rdr["Category"].ToString());
+
+                                catList.Add(category);
+                            }
+                            dgvCategories.DataSource = catList;
+                        }
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unsuccessful" + ex);
+            }
+
+        }
     }
 }

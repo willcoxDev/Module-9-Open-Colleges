@@ -50,124 +50,151 @@
     <Compile Include="Business Logic Layer\Product.cs" />
     <Compile Include="Business Logic Layer\ProductTypes.cs" />
     <Compile Include="Business Logic Layer\Sales.cs" />
-    <Compile Include="Presentatin Layer\Categories\AddCategory.cs">
+    <Compile Include="Presentation Layer\Categories\AddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Categories\AddCategory.Designer.cs">
+    <Compile Include="Presentation Layer\Categories\AddCategory.Designer.cs">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentatin Layer\Categories\MainCategories.cs">
+    <Compile Include="Presentation Layer\Categories\MainCategories.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Categories\MainCategories.Designer.cs">
+    <Compile Include="Presentation Layer\Categories\MainCategories.Designer.cs">
       <DependentUpon>MainCategories.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentatin Layer\Categories\UpdateCategory.cs">
+    <Compile Include="Presentation Layer\Categories\UpdateCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Categories\UpdateCategory.Designer.cs">
+    <Compile Include="Presentation Layer\Categories\UpdateCategory.Designer.cs">
       <DependentUpon>UpdateCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentatin Layer\Customers\AddCustomers.cs">
+    <Compile Include="Presentation Layer\Customers\AddCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Customers\AddCustomers.Designer.cs">
+    <Compile Include="Presentation Layer\Customers\AddCustomers.Designer.cs">
       <DependentUpon>AddCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentatin Layer\Customers\MainCustomers.cs">
+    <Compile Include="Presentation Layer\Customers\MainCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Customers\MainCustomers.Designer.cs">
+    <Compile Include="Presentation Layer\Customers\MainCustomers.Designer.cs">
       <DependentUpon>MainCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentatin Layer\Customers\UpdateCustomers.cs">
+    <Compile Include="Presentation Layer\Customers\UpdateCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Customers\UpdateCustomers.Designer.cs">
+    <Compile Include="Presentation Layer\Customers\UpdateCustomers.Designer.cs">
       <DependentUpon>UpdateCustomers.cs</DependentUpon>
     </Compile>
     <Compile Include="Data Access Layer\ConnectionManager.cs" />
-    <Compile Include="Presentatin Layer\Maintenance\Maintenance.cs">
+    <Compile Include="Presentation Layer\Maintenance\Maintenance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Maintenance\Maintenance.Designer.cs">
+    <Compile Include="Presentation Layer\Maintenance\Maintenance.Designer.cs">
       <DependentUpon>Maintenance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentatin Layer\Products\AddProduct.cs">
+    <Compile Include="Presentation Layer\Products\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Products\AddProduct.Designer.cs">
+    <Compile Include="Presentation Layer\Products\AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentatin Layer\Products\MainProducts.cs">
+    <Compile Include="Presentation Layer\Products\MainProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Products\MainProducts.Designer.cs">
+    <Compile Include="Presentation Layer\Products\MainProducts.Designer.cs">
       <DependentUpon>MainProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentatin Layer\Products\UpdateProduct.cs">
+    <Compile Include="Presentation Layer\Products\UpdateProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Products\UpdateProduct.Designer.cs">
+    <Compile Include="Presentation Layer\Products\UpdateProduct.Designer.cs">
       <DependentUpon>UpdateProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentatin Layer\Sales\AddSales.cs">
+    <Compile Include="Presentation Layer\ProductTypes\MainProductTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Sales\AddSales.Designer.cs">
+    <Compile Include="Presentation Layer\ProductTypes\MainProductTypes.Designer.cs">
+      <DependentUpon>MainProductTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ProductTypes\AddProductTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ProductTypes\AddProductTypes.Designer.cs">
+      <DependentUpon>AddProductTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ProductTypes\UpdateProductTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ProductTypes\UpdateProductTypes.Designer.cs">
+      <DependentUpon>UpdateProductTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Sales\AddSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Sales\AddSales.Designer.cs">
       <DependentUpon>AddSales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentatin Layer\Sales\MainSales.cs">
+    <Compile Include="Presentation Layer\Sales\MainSales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Sales\MainSales.Designer.cs">
+    <Compile Include="Presentation Layer\Sales\MainSales.Designer.cs">
       <DependentUpon>MainSales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentatin Layer\Sales\UpdateSales.cs">
+    <Compile Include="Presentation Layer\Sales\UpdateSales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentatin Layer\Sales\UpdateSales.Designer.cs">
+    <Compile Include="Presentation Layer\Sales\UpdateSales.Designer.cs">
       <DependentUpon>UpdateSales.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentatin Layer\Categories\AddCategory.resx">
+    <EmbeddedResource Include="Presentation Layer\Categories\AddCategory.resx">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Categories\MainCategories.resx">
+    <EmbeddedResource Include="Presentation Layer\Categories\MainCategories.resx">
       <DependentUpon>MainCategories.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Categories\UpdateCategory.resx">
+    <EmbeddedResource Include="Presentation Layer\Categories\UpdateCategory.resx">
       <DependentUpon>UpdateCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Customers\AddCustomers.resx">
+    <EmbeddedResource Include="Presentation Layer\Customers\AddCustomers.resx">
       <DependentUpon>AddCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Customers\MainCustomers.resx">
+    <EmbeddedResource Include="Presentation Layer\Customers\MainCustomers.resx">
       <DependentUpon>MainCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Customers\UpdateCustomers.resx">
+    <EmbeddedResource Include="Presentation Layer\Customers\UpdateCustomers.resx">
       <DependentUpon>UpdateCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Maintenance\Maintenance.resx">
+    <EmbeddedResource Include="Presentation Layer\Maintenance\Maintenance.resx">
       <DependentUpon>Maintenance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Products\AddProduct.resx">
+    <EmbeddedResource Include="Presentation Layer\Products\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Products\MainProducts.resx">
+    <EmbeddedResource Include="Presentation Layer\Products\MainProducts.resx">
       <DependentUpon>MainProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Products\UpdateProduct.resx">
+    <EmbeddedResource Include="Presentation Layer\Products\UpdateProduct.resx">
       <DependentUpon>UpdateProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Sales\AddSales.resx">
+    <EmbeddedResource Include="Presentation Layer\ProductTypes\MainProductTypes.resx">
+      <DependentUpon>MainProductTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ProductTypes\AddProductTypes.resx">
+      <DependentUpon>AddProductTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ProductTypes\UpdateProductTypes.resx">
+      <DependentUpon>UpdateProductTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Sales\AddSales.resx">
       <DependentUpon>AddSales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Sales\MainSales.resx">
+    <EmbeddedResource Include="Presentation Layer\Sales\MainSales.resx">
       <DependentUpon>MainSales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentatin Layer\Sales\UpdateSales.resx">
+    <EmbeddedResource Include="Presentation Layer\Sales\UpdateSales.resx">
       <DependentUpon>UpdateSales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -193,8 +220,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentatin Layer\ProductTypes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
