@@ -161,6 +161,7 @@
             this.btnUpdateSales.TabIndex = 4;
             this.btnUpdateSales.Text = "&Update Sales";
             this.btnUpdateSales.UseVisualStyleBackColor = true;
+            this.btnUpdateSales.Click += new System.EventHandler(this.btnUpdateSales_Click);
             // 
             // dgvSales
             // 

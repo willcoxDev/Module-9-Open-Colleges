@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Acme_Project.Business_Logic_Layer
 {
-    class Sale
+    public class Sale
     {
         //Declare properties of a Customer
 

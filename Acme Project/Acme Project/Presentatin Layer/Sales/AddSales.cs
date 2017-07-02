@@ -132,13 +132,3 @@ namespace Acme_Project.Presentatin_Layer.Sales
 }
 
 
-/*
- * using (var cmd = conn.CreateCommand()) //Specify the Stored Procedure
-                    {
-                        cmd.CommandText = "SELECT ProductID FROM Products WHERE ProductID = @productid";
-                        cmd.Parameters.AddWithValue("productid", int.Parse(txtProductID.Text));
-                        cmd.Transaction = conn.BeginTransaction();
-                        cmd.ExecuteNonQuery();
-                        cmd.Transaction.Commit();
-                    }
-*/

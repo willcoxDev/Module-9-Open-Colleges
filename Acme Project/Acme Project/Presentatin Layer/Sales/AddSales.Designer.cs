@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCustomerID = new System.Windows.Forms.TextBox();
+            this.cbPayable = new System.Windows.Forms.ComboBox();
+            this.dtStartDate = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtProductID = new System.Windows.Forms.TextBox();
             this.txtSaleID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dtStartDate = new System.Windows.Forms.DateTimePicker();
-            this.cbPayable = new System.Windows.Forms.ComboBox();
-            this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.btnAddSale = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,42 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Sales";
+            // 
+            // txtCustomerID
+            // 
+            this.txtCustomerID.Location = new System.Drawing.Point(117, 73);
+            this.txtCustomerID.Name = "txtCustomerID";
+            this.txtCustomerID.Size = new System.Drawing.Size(167, 20);
+            this.txtCustomerID.TabIndex = 11;
+            // 
+            // cbPayable
+            // 
+            this.cbPayable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPayable.FormattingEnabled = true;
+            this.cbPayable.Items.AddRange(new object[] {
+            "F",
+            "M",
+            "Y"});
+            this.cbPayable.Location = new System.Drawing.Point(117, 165);
+            this.cbPayable.Name = "cbPayable";
+            this.cbPayable.Size = new System.Drawing.Size(167, 21);
+            this.cbPayable.TabIndex = 10;
+            // 
+            // dtStartDate
+            // 
+            this.dtStartDate.Location = new System.Drawing.Point(117, 200);
+            this.dtStartDate.Name = "dtStartDate";
+            this.dtStartDate.Size = new System.Drawing.Size(200, 20);
+            this.dtStartDate.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 206);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Start Date:";
             // 
             // txtProductID
             // 
@@ -113,42 +149,6 @@
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Customer ID:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 206);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Start Date:";
-            // 
-            // dtStartDate
-            // 
-            this.dtStartDate.Location = new System.Drawing.Point(117, 200);
-            this.dtStartDate.Name = "dtStartDate";
-            this.dtStartDate.Size = new System.Drawing.Size(200, 20);
-            this.dtStartDate.TabIndex = 9;
-            // 
-            // cbPayable
-            // 
-            this.cbPayable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPayable.FormattingEnabled = true;
-            this.cbPayable.Items.AddRange(new object[] {
-            "F",
-            "M",
-            "Y"});
-            this.cbPayable.Location = new System.Drawing.Point(117, 165);
-            this.cbPayable.Name = "cbPayable";
-            this.cbPayable.Size = new System.Drawing.Size(167, 21);
-            this.cbPayable.TabIndex = 10;
-            // 
-            // txtCustomerID
-            // 
-            this.txtCustomerID.Location = new System.Drawing.Point(117, 73);
-            this.txtCustomerID.Name = "txtCustomerID";
-            this.txtCustomerID.Size = new System.Drawing.Size(167, 20);
-            this.txtCustomerID.TabIndex = 11;
             // 
             // btnAddSale
             // 

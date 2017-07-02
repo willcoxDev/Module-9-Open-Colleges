@@ -165,5 +165,18 @@ namespace Acme_Project.Presentatin_Layer.Sales
             addSales.ShowDialog();
             DisplaySales();
         }
+
+        private void btnUpdateSales_Click(object sender, EventArgs e)
+        {
+            if (dgvSales.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvSales.SelectedRows[0]; //Selecting the row
+                var updateSale = (Sale)selectedRow.DataBoundItem; //setting deleteSale to an instance of the Customer Class of the selected row.
+
+                frmUpdateSales salesUpdate = new frmUpdateSales(updateSale);
+                salesUpdate.ShowDialog();
+                DisplaySales();
+            }
+        }
     }
 }
