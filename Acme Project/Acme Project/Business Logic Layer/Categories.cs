@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Acme_Project.Business_Logic_Layer
 {
-    class Categories
+    class _Category
     {
         //Declare properties of a Customer
 
@@ -14,10 +14,10 @@ namespace Acme_Project.Business_Logic_Layer
         public string Category { get; set; }
 
         //Declaring Default Constructor
-        public Categories() { }
+        public _Category() { }
 
         //Parameterised Constructor
-        public Categories(int saleid, int categoryid, string category)
+        public _Category(int categoryid, string category)
         {
             CategoryID = categoryid;
             Category = category;

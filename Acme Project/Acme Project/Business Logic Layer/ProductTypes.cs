@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Acme_Project.Business_Logic_Layer
 {
-    public class ProductTypes
+    public class _ProductType
     {
         //Declare properties of a Customer
 
@@ -15,10 +15,10 @@ namespace Acme_Project.Business_Logic_Layer
 
 
         //Declaring Default Constructor
-        public ProductTypes() { }
+        public _ProductType() { }
 
         //Parameterised Constructor
-        public ProductTypes(int producttypeid, string producttype)
+        public _ProductType(int producttypeid, string producttype)
         {
             ProductTypeID = producttypeid;
             ProductType = producttype;

@@ -24,7 +24,7 @@ namespace Acme_Project.Presentatin_Layer.Products
         {
             if (validateInput())
             {
-                var newProduct = new Product(0, (cbProductType.SelectedIndex + 1),
+                var newProduct = new Product(0, (int)cbProductType.SelectedValue,
                     txtProductName.Text, decimal.Parse(txtYearlyPremium.Text));
                 using (var conn = ConnectionManager.DatabaseConnection())
                 using (var cmd = new SqlCommand("sp_Products_CreateProduct", conn) //Specify the Stored Procedure
@@ -48,7 +48,7 @@ namespace Acme_Project.Presentatin_Layer.Products
                 {
                     txtProductName.Clear();
                     txtYearlyPremium.Clear();
-                    cbProductType.SelectedIndex = -1;
+                    cbProductType.SelectedItem = null;
                 }
                 else
                 {
@@ -64,7 +64,7 @@ namespace Acme_Project.Presentatin_Layer.Products
                 MessageBox.Show("Please enter a Product Name.");
                 return false;
             }
-            if(cbProductType.SelectedIndex == -1)
+            if(cbProductType.SelectedItem == null)
             {
                 MessageBox.Show("Please select a Product Type");
             }
@@ -74,16 +74,44 @@ namespace Acme_Project.Presentatin_Layer.Products
                 MessageBox.Show("Yearly Premium must be an number.");
                 return false;
             }
-            /* Since it is the primary key no need to use
-            int parsedProductID;
-            if (!int.TryParse(txtCustomerID.Text, out parsedProductID))
-            {
-                MessageBox.Show("ProductS ID must be an number.");
-                return false;
-            }
-            */
+            
 
             return true;
+        }
+
+        private void frmAddProduct_Load(object sender, EventArgs e)
+        {
+            //Populating the combobox from the ProductTypes table.
+            string populateProductType = "SELECT * FROM ProductTypes";
+            List<_ProductType> proTypeList = new List<_ProductType>();
+            try
+            {
+                // Automatically  open and close the connection
+                using (var conn = ConnectionManager.DatabaseConnection())
+                using (var cmd = new SqlCommand(populateProductType, conn))
+                using (var rdr = cmd.ExecuteReader())
+                {
+
+                    while (rdr.Read())
+                    {
+                        //Define the list items
+                        var productType = new _ProductType(
+                            int.Parse(rdr["ProductTypeID"].ToString()),
+                            rdr["ProductType"].ToString());
+
+                        proTypeList.Add(productType);
+                        
+                    }
+                    
+                }
+                cbProductType.DataSource = proTypeList;
+                cbProductType.DisplayMember = "ProductType";
+                cbProductType.ValueMember = "ProductTypeID";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unsuccessful" + ex);
+            }
         }
     }
 }

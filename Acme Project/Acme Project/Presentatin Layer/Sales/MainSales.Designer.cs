@@ -133,6 +133,7 @@
             this.btnDeleteSales.TabIndex = 5;
             this.btnDeleteSales.Text = "&Delete Sales";
             this.btnDeleteSales.UseVisualStyleBackColor = true;
+            this.btnDeleteSales.Click += new System.EventHandler(this.btnDeleteSales_Click);
             // 
             // btnSearchSales
             // 

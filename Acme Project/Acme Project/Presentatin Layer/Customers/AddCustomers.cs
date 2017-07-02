@@ -31,7 +31,7 @@ namespace Acme_Project
                 }
                 //Create an object of the customer class.
                 var newCustomer = new Customer(0,
-                    (cbCategoryID.SelectedIndex) + 1,
+                    (int)cbCategoryID.SelectedValue,
                     txtFirstName.Text,
                     txtLastName.Text,
                     gender,
@@ -77,7 +77,7 @@ namespace Acme_Project
                     txtPostcode.Clear();
                     rbFemale.Checked = false;
                     rbMale.Checked = false;
-                    cbCategoryID.SelectedIndex = -1;
+                    cbCategoryID.SelectedValue = null;
                     cbState.SelectedIndex = -1;
                 }
                 else
@@ -155,6 +155,42 @@ namespace Acme_Project
             */
             
             return true;
+        }
+
+        private void frmAddCustomers_Load_1(object sender, EventArgs e)
+        {
+            //Populating the combobox from the Category table.
+            string populateCategory = "SELECT * FROM Categories";
+            List<_Category> catList = new List<_Category>();
+            try
+            {
+                // Automatically  open and close the connection
+                using (var conn = ConnectionManager.DatabaseConnection())
+                using (var cmd = new SqlCommand(populateCategory, conn))
+                using (var rdr = cmd.ExecuteReader())
+                {
+
+                    while (rdr.Read())
+                    {
+                        //Define the list items
+                        var category = new _Category(
+                            int.Parse(rdr["CategoryID"].ToString()),
+                            rdr["Category"].ToString());
+
+                        catList.Add(category);
+
+                    }
+
+                }
+                cbCategoryID.DataSource = catList;
+                cbCategoryID.DisplayMember = "Category";
+                cbCategoryID.ValueMember = "CategoryID";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unsuccessful" + ex);
+            }
+            cbCategoryID.SelectedValue = 0; //set the Category Box to display nothing when the program starts.
         }
     }
 }

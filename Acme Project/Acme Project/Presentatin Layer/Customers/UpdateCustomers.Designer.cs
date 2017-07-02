@@ -230,11 +230,6 @@
             // cbCategoryID
             // 
             this.cbCategoryID.FormattingEnabled = true;
-            this.cbCategoryID.Items.AddRange(new object[] {
-            "Single",
-            "Partnership",
-            "Family",
-            "Retiree"});
             this.cbCategoryID.Location = new System.Drawing.Point(109, 105);
             this.cbCategoryID.Name = "cbCategoryID";
             this.cbCategoryID.Size = new System.Drawing.Size(121, 21);
@@ -318,6 +313,7 @@
             this.Name = "frmUpdateCustomers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Customers";
+            this.Load += new System.EventHandler(this.frmUpdateCustomers_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);

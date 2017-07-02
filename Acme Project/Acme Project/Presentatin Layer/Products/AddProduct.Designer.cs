@@ -99,11 +99,6 @@
             // 
             this.cbProductType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProductType.FormattingEnabled = true;
-            this.cbProductType.Items.AddRange(new object[] {
-            "Car Insurance",
-            "Home and Contents Insurance",
-            "Life Insurance",
-            "Income Protection Insurance"});
             this.cbProductType.Location = new System.Drawing.Point(117, 76);
             this.cbProductType.Name = "cbProductType";
             this.cbProductType.Size = new System.Drawing.Size(167, 21);
@@ -151,6 +146,7 @@
             this.Name = "frmAddProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Product";
+            this.Load += new System.EventHandler(this.frmAddProduct_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

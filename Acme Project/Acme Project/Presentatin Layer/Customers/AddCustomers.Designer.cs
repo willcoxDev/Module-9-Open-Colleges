@@ -104,11 +104,6 @@
             // 
             this.cbCategoryID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoryID.FormattingEnabled = true;
-            this.cbCategoryID.Items.AddRange(new object[] {
-            "Single",
-            "Partnership",
-            "Family",
-            "Retiree"});
             this.cbCategoryID.Location = new System.Drawing.Point(109, 105);
             this.cbCategoryID.Name = "cbCategoryID";
             this.cbCategoryID.Size = new System.Drawing.Size(121, 21);
@@ -322,6 +317,7 @@
             this.Name = "frmAddCustomers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Customers";
+            this.Load += new System.EventHandler(this.frmAddCustomers_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);

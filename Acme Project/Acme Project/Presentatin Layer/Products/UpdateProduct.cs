@@ -23,7 +23,6 @@ namespace Acme_Project.Presentatin_Layer.Products
             txtProductID.Text = updateProduct.ProductID.ToString();
             txtProductName.Text = updateProduct.ProductName;
             txtYearlyPremium.Text = updateProduct.YearlyPremium.ToString();
-            cbProductType.SelectedIndex = updateProduct.ProductTypeID - 1;
         }
 
         private void btnUpdateProduct_Click(object sender, EventArgs e)
@@ -32,7 +31,7 @@ namespace Acme_Project.Presentatin_Layer.Products
             {
                 //Create an object of the Product class.
                 var updateExistingProduct = new Product(int.Parse(txtProductID.Text),
-                    (cbProductType.SelectedIndex) + 1,
+                    (int)cbProductType.SelectedValue,
                     txtProductName.Text,
                     decimal.Parse(txtYearlyPremium.Text));
 
@@ -76,7 +75,7 @@ namespace Acme_Project.Presentatin_Layer.Products
                 MessageBox.Show("Please enter a Product Name.");
                 return false;
             }
-            if (cbProductType.SelectedIndex == -1)
+            if (cbProductType.SelectedItem == null)
             {
                 MessageBox.Show("Please select a Product Type");
             }
@@ -96,6 +95,42 @@ namespace Acme_Project.Presentatin_Layer.Products
             */
 
             return true;
+        }
+
+        private void frmUpdateProduct_Load(object sender, EventArgs e)
+        {
+            //Populate the combobox with the values from the ProductTypes table
+            string populateProductType = "SELECT * FROM ProductTypes";
+            List<_ProductType> proTypeList = new List<_ProductType>();
+            try
+            {
+                // Automatically  open and close the connection
+                using (var conn = ConnectionManager.DatabaseConnection())
+                using (var cmd = new SqlCommand(populateProductType, conn))
+                using (var rdr = cmd.ExecuteReader())
+                {
+
+                    while (rdr.Read())
+                    {
+                        //Define the list items
+                        var productType = new _ProductType(
+                            int.Parse(rdr["ProductTypeID"].ToString()),
+                            rdr["ProductType"].ToString());
+
+                        proTypeList.Add(productType);
+                    }
+                    
+                }
+                cbProductType.DataSource = proTypeList;
+                cbProductType.DisplayMember = "ProductType";
+                cbProductType.ValueMember = "ProductTypeID";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unsuccessful" + ex);
+            }
+            cbProductType.SelectedValue = updateProduct.ProductTypeID;
         }
     }
 }
