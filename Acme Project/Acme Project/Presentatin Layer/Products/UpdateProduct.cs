@@ -28,42 +28,74 @@ namespace Acme_Project.Presentatin_Layer.Products
 
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
-
-            //Create an object of the Product class.
-            var updateExistingProduct = new Product(int.Parse(txtProductID.Text),
-                (cbProductType.SelectedIndex) + 1,
-                txtProductName.Text,
-                decimal.Parse(txtYearlyPremium.Text));
-
-            using (var conn = ConnectionManager.DatabaseConnection())
+            if (validateInput())
             {
-                //Specify the Stored Procedure
-                using (var cmd = new SqlCommand("sp_Products_UpdateProduct", conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("ProductID", updateExistingProduct.ProductID);
-                    cmd.Parameters.AddWithValue("ProductTypeID", updateExistingProduct.ProductTypeID);
-                    cmd.Parameters.AddWithValue("ProductName", updateExistingProduct.ProductName);
-                    cmd.Parameters.AddWithValue("YearlyPremium", updateExistingProduct.YearlyPremium);
+                //Create an object of the Product class.
+                var updateExistingProduct = new Product(int.Parse(txtProductID.Text),
+                    (cbProductType.SelectedIndex) + 1,
+                    txtProductName.Text,
+                    decimal.Parse(txtYearlyPremium.Text));
 
-                    cmd.Transaction = conn.BeginTransaction();
-                    cmd.ExecuteNonQuery();
-                    cmd.Transaction.Commit();
-                }
-                //Updating Yearly Premium because no one proof read the course material
-                using (var cmd = conn.CreateCommand())
+                using (var conn = ConnectionManager.DatabaseConnection())
                 {
-                    cmd.CommandText = "UPDATE Products SET YearlyPremium = @yearlyPremium WHERE ProductID = @productID";
-                    cmd.Parameters.AddWithValue("yearlyPremium", updateExistingProduct.YearlyPremium);
-                    cmd.Parameters.AddWithValue("productID", updateExistingProduct.ProductID);
+                    //Specify the Stored Procedure
+                    using (var cmd = new SqlCommand("sp_Products_UpdateProduct", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("ProductID", updateExistingProduct.ProductID);
+                        cmd.Parameters.AddWithValue("ProductTypeID", updateExistingProduct.ProductTypeID);
+                        cmd.Parameters.AddWithValue("ProductName", updateExistingProduct.ProductName);
+                        cmd.Parameters.AddWithValue("YearlyPremium", updateExistingProduct.YearlyPremium);
 
-                    cmd.Transaction = conn.BeginTransaction();
-                    cmd.ExecuteNonQuery();
-                    cmd.Transaction.Commit();
+                        cmd.Transaction = conn.BeginTransaction();
+                        cmd.ExecuteNonQuery();
+                        cmd.Transaction.Commit();
+                    }
+                    //Updating Yearly Premium because no one proof read the course material
+                    using (var cmd = conn.CreateCommand())
+                    {
+                        cmd.CommandText = "UPDATE Products SET YearlyPremium = @yearlyPremium WHERE ProductID = @productID";
+                        cmd.Parameters.AddWithValue("yearlyPremium", updateExistingProduct.YearlyPremium);
+                        cmd.Parameters.AddWithValue("productID", updateExistingProduct.ProductID);
+
+                        cmd.Transaction = conn.BeginTransaction();
+                        cmd.ExecuteNonQuery();
+                        cmd.Transaction.Commit();
+                    }
                 }
+                this.Close();
             }
+            
 
-            this.Close();
+            
+        }
+        private bool validateInput()
+        {
+            if (String.IsNullOrEmpty(txtProductName.Text))
+            {
+                MessageBox.Show("Please enter a Product Name.");
+                return false;
+            }
+            if (cbProductType.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a Product Type");
+            }
+            decimal parsedPremium;
+            if (!decimal.TryParse(txtYearlyPremium.Text, out parsedPremium))
+            {
+                MessageBox.Show("Yearly Premium must be an number.");
+                return false;
+            }
+            /* Since it is the primary key no need to use
+            int parsedProductID;
+            if (!int.TryParse(txtProductID.Text, out parsedProductID))
+            {
+                MessageBox.Show("ProductS ID must be an number.");
+                return false;
+            }
+            */
+
+            return true;
         }
     }
 }

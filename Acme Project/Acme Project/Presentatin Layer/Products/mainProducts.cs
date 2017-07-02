@@ -54,6 +54,69 @@ namespace Acme_Project.Presentatin_Layer.Products
 
         }
 
+        private void DisplaySearch()
+        {
+            List<Product> proList = new List<Product>();
+            try
+            {
+                // Automatically  open and close the connection
+                using (var conn = ConnectionManager.DatabaseConnection())
+                {
+                    using (var cmd = conn.CreateCommand())
+                    {
+                        if (rbShowAll.Checked)
+                        {
+                            cmd.CommandText = "SELECT * FROM Products";
+                        }
+                        if (rbSearchProductName.Checked)
+                        {
+                            cmd.CommandText = "SELECT * FROM Products WHERE ProductName = @productName";
+                        }
+                        if (rbSearchYearlyPremium.Checked && cbSearchOperator.SelectedIndex == 0)
+                        {
+                            cmd.CommandText = "SELECT * FROM Products WHERE YearlyPremium < @yearlyPremium";
+                        }
+                        if (rbSearchYearlyPremium.Checked && cbSearchOperator.SelectedIndex == 1)
+                        {
+                            cmd.CommandText = "SELECT * FROM Products WHERE YearlyPremium = @yearlyPremium";
+                        }
+                        if (rbSearchYearlyPremium.Checked && cbSearchOperator.SelectedIndex == 2)
+                        {
+                            cmd.CommandText = "SELECT * FROM Products WHERE YearlyPremium > @yearlyPremium";
+                        }
+
+                        cmd.Parameters.AddWithValue("productName", txtSearchFirstName.Text);
+                        cmd.Parameters.AddWithValue("yearlyPremium", txtSearchYearlyPremium.Text);
+
+                        cmd.Transaction = conn.BeginTransaction();
+                        cmd.ExecuteNonQuery();
+                        cmd.Transaction.Commit();
+                        using (var rdr = cmd.ExecuteReader())
+                        {
+                            while (rdr.Read())
+                            {
+                                //Define the list items
+                                var product = new Product(
+                                int.Parse(rdr["ProductID"].ToString()),
+                                int.Parse(rdr["ProductTypeID"].ToString()),
+                                rdr["ProductName"].ToString(),
+                                decimal.Parse(rdr["YearlyPremium"].ToString()));
+
+                                proList.Add(product);
+                            }
+                            dgvProducts.DataSource = proList;
+                        }
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unsuccessful" + ex);
+            }
+        }
+
         private void frmMainProducts_Load(object sender, EventArgs e)
         {
             cbSearchOperator.SelectedIndex = 1;
@@ -126,6 +189,18 @@ namespace Acme_Project.Presentatin_Layer.Products
                 frmUpdateProduct productsUpdate = new frmUpdateProduct(updateProduct);
                 productsUpdate.ShowDialog();
                 DisplayProducts();
+            }
+        }
+
+        private void btnSearchProduct_Click(object sender, EventArgs e)
+        {
+            if (rbShowAll.Checked)
+            {
+                DisplayProducts();
+            }
+            if (rbSearchProductName.Checked || rbSearchYearlyPremium.Checked)
+            {
+                DisplaySearch();
             }
         }
     }

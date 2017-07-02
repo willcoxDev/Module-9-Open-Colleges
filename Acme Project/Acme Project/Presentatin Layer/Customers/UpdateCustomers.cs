@@ -40,47 +40,121 @@ namespace Acme_Project.Customers
 
         private void btnUpdateCustomer_Click(object sender, EventArgs e)
         {
-            string gender = "M";
-            if (rbFemale.Checked)
+            if (validateInput())
             {
-                gender = "F";
+                string gender = "M";
+                if (rbFemale.Checked)
+                {
+                    gender = "F";
+                }
+                //Create an object of the customer class.
+                var updateExistingCustomer = new Customer(int.Parse(txtCustomerID.Text),
+                    (cbCategoryID.SelectedIndex) + 1,
+                    txtFirstName.Text,
+                    txtLastName.Text,
+                    gender,
+                    txtAddress.Text,
+                    txtSuburb.Text,
+                    cbState.Text,
+                    int.Parse(txtPostcode.Text),
+                    dtBirthDate.Value);
+
+                using (var conn = ConnectionManager.DatabaseConnection())
+                using (var cmd = new SqlCommand("sp_Customers_UpdateCustomer", conn) //Specify the Stored Procedure
+                {
+                    CommandType = CommandType.StoredProcedure
+                })
+                {
+                    cmd.Parameters.AddWithValue("CategoryID", updateExistingCustomer.CategoryID);
+                    cmd.Parameters.AddWithValue("FirstName", updateExistingCustomer.FirstName);
+                    cmd.Parameters.AddWithValue("LastName", updateExistingCustomer.LastName);
+                    cmd.Parameters.AddWithValue("Gender", updateExistingCustomer.Gender);
+                    cmd.Parameters.AddWithValue("Address", updateExistingCustomer.Address);
+                    cmd.Parameters.AddWithValue("Suburb", updateExistingCustomer.Suburb);
+                    cmd.Parameters.AddWithValue("State", updateExistingCustomer.State);
+                    cmd.Parameters.AddWithValue("Postcode", updateExistingCustomer.PostCode);
+                    cmd.Parameters.AddWithValue("BirthDate", updateExistingCustomer.BirthDate);
+                    cmd.Parameters.AddWithValue("CustomerID", updateExistingCustomer.CustomerID);
+
+                    cmd.Transaction = conn.BeginTransaction();
+                    cmd.ExecuteNonQuery();
+                    cmd.Transaction.Commit();
+                    this.Close();
+                }
             }
-            //Create an object of the customer class.
-            var updateExistingCustomer = new Customer(int.Parse(txtCustomerID.Text),
-                (cbCategoryID.SelectedIndex) + 1,
-                txtFirstName.Text,
-                txtLastName.Text,
-                gender,
-                txtAddress.Text,
-                txtSuburb.Text,
-                cbState.Text,
-                int.Parse(txtPostcode.Text),
-                dtBirthDate.Value);
+            
 
-            using (var conn = ConnectionManager.DatabaseConnection())
-            using (var cmd = new SqlCommand("sp_Customers_UpdateCustomer", conn) //Specify the Stored Procedure
+            
+        }
+
+        //Validate all the input, Show Error message box with with the problem the user has.
+        private bool validateInput()
+        {
+            if (String.IsNullOrEmpty(txtFirstName.Text))
             {
-                CommandType = CommandType.StoredProcedure
-            })
-            {
-                cmd.Parameters.AddWithValue("CategoryID", updateExistingCustomer.CategoryID);
-                cmd.Parameters.AddWithValue("FirstName", updateExistingCustomer.FirstName);
-                cmd.Parameters.AddWithValue("LastName", updateExistingCustomer.LastName);
-                cmd.Parameters.AddWithValue("Gender", updateExistingCustomer.Gender);
-                cmd.Parameters.AddWithValue("Address", updateExistingCustomer.Address);
-                cmd.Parameters.AddWithValue("Suburb", updateExistingCustomer.Suburb);
-                cmd.Parameters.AddWithValue("State", updateExistingCustomer.State);
-                cmd.Parameters.AddWithValue("Postcode", updateExistingCustomer.PostCode);
-                cmd.Parameters.AddWithValue("BirthDate", updateExistingCustomer.BirthDate);
-                cmd.Parameters.AddWithValue("CustomerID", updateExistingCustomer.CustomerID);
-
-                cmd.Transaction = conn.BeginTransaction();
-                cmd.ExecuteNonQuery();
-                cmd.Transaction.Commit();
-
+                MessageBox.Show("Please enter the first name.");
+                return false;
             }
 
-            this.Close();
+            if (String.IsNullOrEmpty(txtLastName.Text))
+            {
+                MessageBox.Show("Please enter the Last name.");
+                return false;
+            }
+
+            if (rbMale.Checked == false && rbFemale.Checked == false)
+            {
+                MessageBox.Show("Please select a Gender.");
+                return false;
+            }
+
+            if (String.IsNullOrEmpty(cbCategoryID.Text))
+            {
+                MessageBox.Show("Please select a Category.");
+                return false;
+            }
+
+
+            if (String.IsNullOrEmpty(txtAddress.Text))
+            {
+                MessageBox.Show("Please enter an Address.");
+                return false;
+            }
+
+            if (String.IsNullOrEmpty(txtSuburb.Text))
+            {
+                MessageBox.Show("Please enter a Suburb.");
+                return false;
+            }
+
+            if (String.IsNullOrEmpty(cbState.Text))
+            {
+                MessageBox.Show("Please select a State.");
+                return false;
+            }
+
+            if (String.IsNullOrEmpty(txtPostcode.Text))
+            {
+                MessageBox.Show("Please enter a postcode.");
+                return false;
+            }
+
+            int parsedPostcode;
+            if (!int.TryParse(txtPostcode.Text, out parsedPostcode))
+            {
+                MessageBox.Show("Postcode must be an number.");
+                return false;
+            }
+            /* Since it is the primary key no need to use
+            int parsedCustomerID;
+            if (!int.TryParse(txtCustomerID.Text, out parsedCustomerID))
+            {
+                MessageBox.Show("Customer ID must be an number.");
+                return false;
+            }
+            */
+
+            return true;
         }
     }
 }
