@@ -34,15 +34,17 @@
             this.txtProductTypeID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAddProductTypes
             // 
-            this.btnAddProductTypes.Location = new System.Drawing.Point(593, 285);
+            this.btnAddProductTypes.Location = new System.Drawing.Point(107, 38);
             this.btnAddProductTypes.Name = "btnAddProductTypes";
             this.btnAddProductTypes.Size = new System.Drawing.Size(105, 32);
-            this.btnAddProductTypes.TabIndex = 7;
+            this.btnAddProductTypes.TabIndex = 0;
             this.btnAddProductTypes.Text = "Add Product Type";
             this.btnAddProductTypes.UseVisualStyleBackColor = true;
             this.btnAddProductTypes.Click += new System.EventHandler(this.btnAddProductTypes_Click);
@@ -65,14 +67,14 @@
             this.txtProductType.Location = new System.Drawing.Point(117, 73);
             this.txtProductType.Name = "txtProductType";
             this.txtProductType.Size = new System.Drawing.Size(167, 20);
-            this.txtProductType.TabIndex = 5;
+            this.txtProductType.TabIndex = 1;
             // 
             // txtProductTypeID
             // 
             this.txtProductTypeID.Location = new System.Drawing.Point(117, 27);
             this.txtProductTypeID.Name = "txtProductTypeID";
             this.txtProductTypeID.Size = new System.Drawing.Size(167, 20);
-            this.txtProductTypeID.TabIndex = 4;
+            this.txtProductTypeID.TabIndex = 0;
             this.txtProductTypeID.Visible = false;
             // 
             // label1
@@ -94,18 +96,28 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Product Type:";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnAddProductTypes);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 511);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(934, 100);
+            this.panel1.TabIndex = 12;
+            // 
             // frmAddProductTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.btnAddProductTypes);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAddProductTypes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Product Types";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -118,5 +130,6 @@
         private System.Windows.Forms.TextBox txtProductTypeID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

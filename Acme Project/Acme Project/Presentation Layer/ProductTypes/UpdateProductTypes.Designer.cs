@@ -34,15 +34,17 @@
             this.txtProductTypeID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUpdateProductTypes
             // 
-            this.btnUpdateProductTypes.Location = new System.Drawing.Point(588, 282);
+            this.btnUpdateProductTypes.Location = new System.Drawing.Point(111, 38);
             this.btnUpdateProductTypes.Name = "btnUpdateProductTypes";
             this.btnUpdateProductTypes.Size = new System.Drawing.Size(105, 36);
-            this.btnUpdateProductTypes.TabIndex = 9;
+            this.btnUpdateProductTypes.TabIndex = 0;
             this.btnUpdateProductTypes.Text = "Update Product Type";
             this.btnUpdateProductTypes.UseVisualStyleBackColor = true;
             this.btnUpdateProductTypes.Click += new System.EventHandler(this.btnUpdateProductTypes_Click);
@@ -53,7 +55,7 @@
             this.groupBox1.Controls.Add(this.txtProductTypeID);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(123, 239);
+            this.groupBox1.Location = new System.Drawing.Point(111, 224);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(378, 126);
             this.groupBox1.TabIndex = 10;
@@ -65,7 +67,7 @@
             this.txtProductType.Location = new System.Drawing.Point(117, 73);
             this.txtProductType.Name = "txtProductType";
             this.txtProductType.Size = new System.Drawing.Size(167, 20);
-            this.txtProductType.TabIndex = 5;
+            this.txtProductType.TabIndex = 1;
             // 
             // txtProductTypeID
             // 
@@ -73,7 +75,7 @@
             this.txtProductTypeID.Name = "txtProductTypeID";
             this.txtProductTypeID.ReadOnly = true;
             this.txtProductTypeID.Size = new System.Drawing.Size(167, 20);
-            this.txtProductTypeID.TabIndex = 4;
+            this.txtProductTypeID.TabIndex = 0;
             // 
             // label1
             // 
@@ -93,18 +95,28 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Product Type:";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnUpdateProductTypes);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 511);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(934, 100);
+            this.panel1.TabIndex = 11;
+            // 
             // frmUpdateProductTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.btnUpdateProductTypes);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmUpdateProductTypes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Product Types";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -117,5 +129,6 @@
         private System.Windows.Forms.TextBox txtProductTypeID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

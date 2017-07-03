@@ -82,14 +82,14 @@
             this.txtSearchProductID.Location = new System.Drawing.Point(109, 78);
             this.txtSearchProductID.Name = "txtSearchProductID";
             this.txtSearchProductID.Size = new System.Drawing.Size(100, 20);
-            this.txtSearchProductID.TabIndex = 10;
+            this.txtSearchProductID.TabIndex = 1;
             // 
             // txtSearchSaleID
             // 
             this.txtSearchSaleID.Location = new System.Drawing.Point(109, 46);
             this.txtSearchSaleID.Name = "txtSearchSaleID";
             this.txtSearchSaleID.Size = new System.Drawing.Size(100, 20);
-            this.txtSearchSaleID.TabIndex = 9;
+            this.txtSearchSaleID.TabIndex = 0;
             // 
             // rbSearchSaleID
             // 
@@ -107,10 +107,9 @@
             this.rbShowAll.Checked = true;
             this.rbShowAll.Location = new System.Drawing.Point(8, 15);
             this.rbShowAll.Name = "rbShowAll";
-            this.rbShowAll.Size = new System.Drawing.Size(94, 17);
+            this.rbShowAll.Size = new System.Drawing.Size(97, 17);
             this.rbShowAll.TabIndex = 7;
-            this.rbShowAll.TabStop = true;
-            this.rbShowAll.Text = "Show all Sales";
+            this.rbShowAll.Text = "Show all Sales:";
             this.rbShowAll.UseVisualStyleBackColor = true;
             // 
             // rbSearchProductID
@@ -129,7 +128,7 @@
             this.btnAddSales.Name = "btnAddSales";
             this.btnAddSales.Size = new System.Drawing.Size(105, 23);
             this.btnAddSales.TabIndex = 0;
-            this.btnAddSales.Text = "&Add Sales";
+            this.btnAddSales.Text = "Add Sales";
             this.btnAddSales.UseVisualStyleBackColor = true;
             this.btnAddSales.Click += new System.EventHandler(this.btnAddSales_Click);
             // 
@@ -138,8 +137,8 @@
             this.btnDeleteSales.Location = new System.Drawing.Point(145, 46);
             this.btnDeleteSales.Name = "btnDeleteSales";
             this.btnDeleteSales.Size = new System.Drawing.Size(105, 23);
-            this.btnDeleteSales.TabIndex = 5;
-            this.btnDeleteSales.Text = "&Delete Sales";
+            this.btnDeleteSales.TabIndex = 1;
+            this.btnDeleteSales.Text = "Delete Sales";
             this.btnDeleteSales.UseVisualStyleBackColor = true;
             this.btnDeleteSales.Click += new System.EventHandler(this.btnDeleteSales_Click);
             // 
@@ -149,7 +148,7 @@
             this.btnSearchSales.Name = "btnSearchSales";
             this.btnSearchSales.Size = new System.Drawing.Size(105, 23);
             this.btnSearchSales.TabIndex = 3;
-            this.btnSearchSales.Text = "&Search Sales";
+            this.btnSearchSales.Text = "Search Sales";
             this.btnSearchSales.UseVisualStyleBackColor = true;
             this.btnSearchSales.Click += new System.EventHandler(this.btnSearchSales_Click);
             // 
@@ -158,8 +157,8 @@
             this.btnUpdateSales.Location = new System.Drawing.Point(256, 46);
             this.btnUpdateSales.Name = "btnUpdateSales";
             this.btnUpdateSales.Size = new System.Drawing.Size(105, 23);
-            this.btnUpdateSales.TabIndex = 4;
-            this.btnUpdateSales.Text = "&Update Sales";
+            this.btnUpdateSales.TabIndex = 2;
+            this.btnUpdateSales.Text = "Update Sales";
             this.btnUpdateSales.UseVisualStyleBackColor = true;
             this.btnUpdateSales.Click += new System.EventHandler(this.btnUpdateSales_Click);
             // 
@@ -181,6 +180,7 @@
             this.dgvSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSales.Size = new System.Drawing.Size(934, 499);
             this.dgvSales.TabIndex = 9;
+            this.dgvSales.TabStop = false;
             // 
             // Column1
             // 

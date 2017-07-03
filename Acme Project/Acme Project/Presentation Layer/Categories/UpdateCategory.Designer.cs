@@ -34,15 +34,17 @@
             this.txtCategoryID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUpdateCategories
             // 
-            this.btnUpdateCategories.Location = new System.Drawing.Point(618, 295);
+            this.btnUpdateCategories.Location = new System.Drawing.Point(144, 42);
             this.btnUpdateCategories.Name = "btnUpdateCategories";
             this.btnUpdateCategories.Size = new System.Drawing.Size(105, 23);
-            this.btnUpdateCategories.TabIndex = 7;
+            this.btnUpdateCategories.TabIndex = 0;
             this.btnUpdateCategories.Text = "Update Category";
             this.btnUpdateCategories.UseVisualStyleBackColor = true;
             this.btnUpdateCategories.Click += new System.EventHandler(this.btnUpdateCategories_Click);
@@ -53,7 +55,7 @@
             this.groupBox1.Controls.Add(this.txtCategoryID);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(172, 242);
+            this.groupBox1.Location = new System.Drawing.Point(144, 227);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(378, 126);
             this.groupBox1.TabIndex = 8;
@@ -65,7 +67,7 @@
             this.txtCategory.Location = new System.Drawing.Point(117, 73);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(167, 20);
-            this.txtCategory.TabIndex = 5;
+            this.txtCategory.TabIndex = 0;
             // 
             // txtCategoryID
             // 
@@ -73,7 +75,8 @@
             this.txtCategoryID.Name = "txtCategoryID";
             this.txtCategoryID.ReadOnly = true;
             this.txtCategoryID.Size = new System.Drawing.Size(167, 20);
-            this.txtCategoryID.TabIndex = 4;
+            this.txtCategoryID.TabIndex = 1;
+            this.txtCategoryID.TabStop = false;
             // 
             // label1
             // 
@@ -93,18 +96,28 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Category:";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnUpdateCategories);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 511);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(934, 100);
+            this.panel1.TabIndex = 12;
+            // 
             // frmUpdateCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.btnUpdateCategories);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmUpdateCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Category";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -117,5 +130,6 @@
         private System.Windows.Forms.TextBox txtCategoryID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

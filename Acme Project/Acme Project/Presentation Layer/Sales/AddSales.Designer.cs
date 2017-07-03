@@ -40,7 +40,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddSale = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -58,16 +60,16 @@
             this.groupBox1.Location = new System.Drawing.Point(120, 188);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(378, 241);
-            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Sales";
             // 
             // txtCustomerID
             // 
-            this.txtCustomerID.Location = new System.Drawing.Point(117, 73);
+            this.txtCustomerID.Location = new System.Drawing.Point(117, 71);
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.Size = new System.Drawing.Size(167, 20);
-            this.txtCustomerID.TabIndex = 11;
+            this.txtCustomerID.TabIndex = 1;
             // 
             // cbPayable
             // 
@@ -77,17 +79,17 @@
             "F",
             "M",
             "Y"});
-            this.cbPayable.Location = new System.Drawing.Point(117, 165);
+            this.cbPayable.Location = new System.Drawing.Point(117, 159);
             this.cbPayable.Name = "cbPayable";
             this.cbPayable.Size = new System.Drawing.Size(167, 21);
-            this.cbPayable.TabIndex = 10;
+            this.cbPayable.TabIndex = 3;
             // 
             // dtStartDate
             // 
             this.dtStartDate.Location = new System.Drawing.Point(117, 200);
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.Size = new System.Drawing.Size(200, 20);
-            this.dtStartDate.TabIndex = 9;
+            this.dtStartDate.TabIndex = 4;
             // 
             // label5
             // 
@@ -100,23 +102,23 @@
             // 
             // txtProductID
             // 
-            this.txtProductID.Location = new System.Drawing.Point(117, 119);
+            this.txtProductID.Location = new System.Drawing.Point(117, 115);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(167, 20);
-            this.txtProductID.TabIndex = 5;
+            this.txtProductID.TabIndex = 2;
             // 
             // txtSaleID
             // 
             this.txtSaleID.Location = new System.Drawing.Point(117, 27);
             this.txtSaleID.Name = "txtSaleID";
             this.txtSaleID.Size = new System.Drawing.Size(167, 20);
-            this.txtSaleID.TabIndex = 4;
+            this.txtSaleID.TabIndex = 0;
             this.txtSaleID.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 168);
+            this.label4.Location = new System.Drawing.Point(19, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 3;
@@ -135,7 +137,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 122);
+            this.label3.Location = new System.Drawing.Point(19, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 2;
@@ -144,7 +146,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 76);
+            this.label2.Location = new System.Drawing.Point(19, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 1;
@@ -152,26 +154,36 @@
             // 
             // btnAddSale
             // 
-            this.btnAddSale.Location = new System.Drawing.Point(593, 299);
+            this.btnAddSale.Location = new System.Drawing.Point(120, 43);
             this.btnAddSale.Name = "btnAddSale";
             this.btnAddSale.Size = new System.Drawing.Size(89, 23);
-            this.btnAddSale.TabIndex = 6;
+            this.btnAddSale.TabIndex = 0;
             this.btnAddSale.Text = "Add Sale";
             this.btnAddSale.UseVisualStyleBackColor = true;
             this.btnAddSale.Click += new System.EventHandler(this.btnAddSale_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnAddSale);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 511);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(934, 100);
+            this.panel1.TabIndex = 12;
             // 
             // frmAddSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.btnAddSale);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAddSales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Sales";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -190,5 +202,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAddSale;
+        private System.Windows.Forms.Panel panel1;
     }
 }

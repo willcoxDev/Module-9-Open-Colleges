@@ -40,7 +40,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnUpdateSale = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -64,7 +66,7 @@
             // 
             // txtCustomerID
             // 
-            this.txtCustomerID.Location = new System.Drawing.Point(117, 73);
+            this.txtCustomerID.Location = new System.Drawing.Point(117, 71);
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.ReadOnly = true;
             this.txtCustomerID.Size = new System.Drawing.Size(167, 20);
@@ -78,17 +80,17 @@
             "F",
             "M",
             "Y"});
-            this.cbPayable.Location = new System.Drawing.Point(117, 165);
+            this.cbPayable.Location = new System.Drawing.Point(117, 159);
             this.cbPayable.Name = "cbPayable";
             this.cbPayable.Size = new System.Drawing.Size(167, 21);
-            this.cbPayable.TabIndex = 10;
+            this.cbPayable.TabIndex = 0;
             // 
             // dtStartDate
             // 
             this.dtStartDate.Location = new System.Drawing.Point(117, 200);
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.Size = new System.Drawing.Size(200, 20);
-            this.dtStartDate.TabIndex = 9;
+            this.dtStartDate.TabIndex = 1;
             // 
             // label5
             // 
@@ -101,7 +103,7 @@
             // 
             // txtProductID
             // 
-            this.txtProductID.Location = new System.Drawing.Point(117, 119);
+            this.txtProductID.Location = new System.Drawing.Point(117, 115);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.ReadOnly = true;
             this.txtProductID.Size = new System.Drawing.Size(167, 20);
@@ -118,7 +120,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 168);
+            this.label4.Location = new System.Drawing.Point(19, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 3;
@@ -136,7 +138,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 122);
+            this.label3.Location = new System.Drawing.Point(19, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 2;
@@ -145,7 +147,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 76);
+            this.label2.Location = new System.Drawing.Point(19, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 1;
@@ -153,26 +155,36 @@
             // 
             // btnUpdateSale
             // 
-            this.btnUpdateSale.Location = new System.Drawing.Point(638, 302);
+            this.btnUpdateSale.Location = new System.Drawing.Point(124, 38);
             this.btnUpdateSale.Name = "btnUpdateSale";
             this.btnUpdateSale.Size = new System.Drawing.Size(89, 23);
-            this.btnUpdateSale.TabIndex = 7;
+            this.btnUpdateSale.TabIndex = 0;
             this.btnUpdateSale.Text = "Update Sale";
             this.btnUpdateSale.UseVisualStyleBackColor = true;
             this.btnUpdateSale.Click += new System.EventHandler(this.btnUpdateSale_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnUpdateSale);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 511);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(934, 100);
+            this.panel1.TabIndex = 12;
             // 
             // frmUpdateSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.btnUpdateSale);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmUpdateSales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Sales";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -191,5 +203,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnUpdateSale;
+        private System.Windows.Forms.Panel panel1;
     }
 }

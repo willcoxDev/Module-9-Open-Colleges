@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.dgvProductType = new System.Windows.Forms.DataGridView();
+            this.ProductTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlCategories = new System.Windows.Forms.Panel();
             this.grpSearch = new System.Windows.Forms.GroupBox();
             this.txtSearchProductType = new System.Windows.Forms.TextBox();
@@ -40,8 +42,6 @@
             this.btnAddProductType = new System.Windows.Forms.Button();
             this.btnDeleteProductType = new System.Windows.Forms.Button();
             this.btnUpdateProductType = new System.Windows.Forms.Button();
-            this.ProductTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductType)).BeginInit();
             this.pnlCategories.SuspendLayout();
             this.grpSearch.SuspendLayout();
@@ -62,6 +62,21 @@
             this.dgvProductType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductType.Size = new System.Drawing.Size(934, 499);
             this.dgvProductType.TabIndex = 12;
+            this.dgvProductType.TabStop = false;
+            // 
+            // ProductTypeID
+            // 
+            this.ProductTypeID.DataPropertyName = "ProductTypeID";
+            this.ProductTypeID.HeaderText = "Product Type ID";
+            this.ProductTypeID.Name = "ProductTypeID";
+            this.ProductTypeID.ReadOnly = true;
+            // 
+            // ProductType
+            // 
+            this.ProductType.DataPropertyName = "ProductType";
+            this.ProductType.HeaderText = "Product Type";
+            this.ProductType.Name = "ProductType";
+            this.ProductType.ReadOnly = true;
             // 
             // pnlCategories
             // 
@@ -95,14 +110,14 @@
             this.txtSearchProductType.Location = new System.Drawing.Point(109, 78);
             this.txtSearchProductType.Name = "txtSearchProductType";
             this.txtSearchProductType.Size = new System.Drawing.Size(100, 20);
-            this.txtSearchProductType.TabIndex = 10;
+            this.txtSearchProductType.TabIndex = 1;
             // 
             // txtSearchProductTypeID
             // 
             this.txtSearchProductTypeID.Location = new System.Drawing.Point(109, 46);
             this.txtSearchProductTypeID.Name = "txtSearchProductTypeID";
             this.txtSearchProductTypeID.Size = new System.Drawing.Size(100, 20);
-            this.txtSearchProductTypeID.TabIndex = 9;
+            this.txtSearchProductTypeID.TabIndex = 0;
             // 
             // rbSearchProductTypeID
             // 
@@ -120,10 +135,10 @@
             this.rbShowAll.Checked = true;
             this.rbShowAll.Location = new System.Drawing.Point(8, 15);
             this.rbShowAll.Name = "rbShowAll";
-            this.rbShowAll.Size = new System.Drawing.Size(94, 17);
+            this.rbShowAll.Size = new System.Drawing.Size(140, 17);
             this.rbShowAll.TabIndex = 7;
             this.rbShowAll.TabStop = true;
-            this.rbShowAll.Text = "Show all Sales";
+            this.rbShowAll.Text = "Show all Product Types:";
             this.rbShowAll.UseVisualStyleBackColor = true;
             // 
             // rbSearchProductType
@@ -141,7 +156,7 @@
             this.btnSearchProductType.Location = new System.Drawing.Point(367, 46);
             this.btnSearchProductType.Name = "btnSearchProductType";
             this.btnSearchProductType.Size = new System.Drawing.Size(105, 36);
-            this.btnSearchProductType.TabIndex = 12;
+            this.btnSearchProductType.TabIndex = 3;
             this.btnSearchProductType.Text = "&Search Product Type";
             this.btnSearchProductType.UseVisualStyleBackColor = true;
             this.btnSearchProductType.Click += new System.EventHandler(this.btnSearchProductType_Click);
@@ -161,7 +176,7 @@
             this.btnDeleteProductType.Location = new System.Drawing.Point(145, 46);
             this.btnDeleteProductType.Name = "btnDeleteProductType";
             this.btnDeleteProductType.Size = new System.Drawing.Size(105, 36);
-            this.btnDeleteProductType.TabIndex = 5;
+            this.btnDeleteProductType.TabIndex = 1;
             this.btnDeleteProductType.Text = "Delete Product Type";
             this.btnDeleteProductType.UseVisualStyleBackColor = true;
             this.btnDeleteProductType.Click += new System.EventHandler(this.btnDeleteProductType_Click);
@@ -171,24 +186,10 @@
             this.btnUpdateProductType.Location = new System.Drawing.Point(256, 46);
             this.btnUpdateProductType.Name = "btnUpdateProductType";
             this.btnUpdateProductType.Size = new System.Drawing.Size(105, 36);
-            this.btnUpdateProductType.TabIndex = 4;
+            this.btnUpdateProductType.TabIndex = 2;
             this.btnUpdateProductType.Text = "Update Product Type";
             this.btnUpdateProductType.UseVisualStyleBackColor = true;
             this.btnUpdateProductType.Click += new System.EventHandler(this.btnUpdateProductType_Click);
-            // 
-            // ProductTypeID
-            // 
-            this.ProductTypeID.DataPropertyName = "ProductTypeID";
-            this.ProductTypeID.HeaderText = "Product Type ID";
-            this.ProductTypeID.Name = "ProductTypeID";
-            this.ProductTypeID.ReadOnly = true;
-            // 
-            // ProductType
-            // 
-            this.ProductType.DataPropertyName = "ProductType";
-            this.ProductType.HeaderText = "Product Type";
-            this.ProductType.Name = "ProductType";
-            this.ProductType.ReadOnly = true;
             // 
             // frmMainProductTypes
             // 

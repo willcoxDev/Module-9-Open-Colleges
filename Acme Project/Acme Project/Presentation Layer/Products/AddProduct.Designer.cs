@@ -38,7 +38,9 @@
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.txtProductID = new System.Windows.Forms.TextBox();
             this.btnAddProduct = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -50,6 +52,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Product ID:";
             this.label1.Visible = false;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -59,6 +62,7 @@
             this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Product Type:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -68,6 +72,7 @@
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Product Name:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -99,49 +104,58 @@
             // 
             this.cbProductType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProductType.FormattingEnabled = true;
-            this.cbProductType.Location = new System.Drawing.Point(117, 76);
+            this.cbProductType.Location = new System.Drawing.Point(117, 73);
             this.cbProductType.Name = "cbProductType";
             this.cbProductType.Size = new System.Drawing.Size(167, 21);
-            this.cbProductType.TabIndex = 7;
+            this.cbProductType.TabIndex = 1;
             // 
             // txtYearlyPremium
             // 
             this.txtYearlyPremium.Location = new System.Drawing.Point(117, 165);
             this.txtYearlyPremium.Name = "txtYearlyPremium";
             this.txtYearlyPremium.Size = new System.Drawing.Size(167, 20);
-            this.txtYearlyPremium.TabIndex = 6;
+            this.txtYearlyPremium.TabIndex = 3;
             // 
             // txtProductName
             // 
             this.txtProductName.Location = new System.Drawing.Point(117, 119);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(167, 20);
-            this.txtProductName.TabIndex = 5;
+            this.txtProductName.TabIndex = 2;
             // 
             // txtProductID
             // 
             this.txtProductID.Location = new System.Drawing.Point(117, 27);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(167, 20);
-            this.txtProductID.TabIndex = 4;
+            this.txtProductID.TabIndex = 0;
             this.txtProductID.Visible = false;
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(579, 289);
+            this.btnAddProduct.Location = new System.Drawing.Point(92, 41);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(91, 23);
-            this.btnAddProduct.TabIndex = 5;
+            this.btnAddProduct.TabIndex = 0;
             this.btnAddProduct.Text = "&Add Product";
             this.btnAddProduct.UseVisualStyleBackColor = true;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnAddProduct);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 511);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(934, 100);
+            this.panel1.TabIndex = 12;
             // 
             // frmAddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.btnAddProduct);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAddProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -149,6 +163,7 @@
             this.Load += new System.EventHandler(this.frmAddProduct_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -165,5 +180,6 @@
         private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.TextBox txtProductID;
         private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.Panel panel1;
     }
 }

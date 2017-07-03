@@ -53,17 +53,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUpdateCustomer
             // 
-            this.btnUpdateCustomer.Location = new System.Drawing.Point(551, 305);
+            this.btnUpdateCustomer.Location = new System.Drawing.Point(79, 43);
             this.btnUpdateCustomer.Name = "btnUpdateCustomer";
             this.btnUpdateCustomer.Size = new System.Drawing.Size(127, 23);
-            this.btnUpdateCustomer.TabIndex = 23;
+            this.btnUpdateCustomer.TabIndex = 0;
             this.btnUpdateCustomer.Text = "Update Customer";
             this.btnUpdateCustomer.UseVisualStyleBackColor = true;
             this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
@@ -93,7 +95,7 @@
             this.txtCustomerID.Location = new System.Drawing.Point(118, 24);
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.Size = new System.Drawing.Size(100, 20);
-            this.txtCustomerID.TabIndex = 14;
+            this.txtCustomerID.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -126,14 +128,14 @@
             this.cbState.Location = new System.Drawing.Point(120, 74);
             this.cbState.Name = "cbState";
             this.cbState.Size = new System.Drawing.Size(100, 21);
-            this.cbState.TabIndex = 18;
+            this.cbState.TabIndex = 2;
             // 
             // txtPostcode
             // 
             this.txtPostcode.Location = new System.Drawing.Point(120, 102);
             this.txtPostcode.Name = "txtPostcode";
             this.txtPostcode.Size = new System.Drawing.Size(100, 20);
-            this.txtPostcode.TabIndex = 17;
+            this.txtPostcode.TabIndex = 3;
             // 
             // label9
             // 
@@ -158,7 +160,7 @@
             this.txtSuburb.Location = new System.Drawing.Point(120, 46);
             this.txtSuburb.Name = "txtSuburb";
             this.txtSuburb.Size = new System.Drawing.Size(100, 20);
-            this.txtSuburb.TabIndex = 15;
+            this.txtSuburb.TabIndex = 1;
             // 
             // label7
             // 
@@ -174,7 +176,7 @@
             this.txtAddress.Location = new System.Drawing.Point(120, 20);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(100, 20);
-            this.txtAddress.TabIndex = 14;
+            this.txtAddress.TabIndex = 0;
             // 
             // label6
             // 
@@ -211,7 +213,7 @@
             this.rbFemale.Location = new System.Drawing.Point(163, 75);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(59, 17);
-            this.rbFemale.TabIndex = 12;
+            this.rbFemale.TabIndex = 3;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
@@ -222,7 +224,7 @@
             this.rbMale.Location = new System.Drawing.Point(109, 75);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(48, 17);
-            this.rbMale.TabIndex = 11;
+            this.rbMale.TabIndex = 2;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
@@ -233,28 +235,28 @@
             this.cbCategoryID.Location = new System.Drawing.Point(109, 105);
             this.cbCategoryID.Name = "cbCategoryID";
             this.cbCategoryID.Size = new System.Drawing.Size(121, 21);
-            this.cbCategoryID.TabIndex = 10;
+            this.cbCategoryID.TabIndex = 4;
             // 
             // dtBirthDate
             // 
             this.dtBirthDate.Location = new System.Drawing.Point(109, 134);
             this.dtBirthDate.Name = "dtBirthDate";
             this.dtBirthDate.Size = new System.Drawing.Size(200, 20);
-            this.dtBirthDate.TabIndex = 9;
+            this.dtBirthDate.TabIndex = 5;
             // 
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(109, 46);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(100, 20);
-            this.txtLastName.TabIndex = 6;
+            this.txtLastName.TabIndex = 1;
             // 
             // txtFirstName
             // 
             this.txtFirstName.Location = new System.Drawing.Point(109, 20);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
-            this.txtFirstName.TabIndex = 5;
+            this.txtFirstName.TabIndex = 0;
             // 
             // label5
             // 
@@ -301,12 +303,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name:";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnUpdateCustomer);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 511);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(934, 100);
+            this.panel1.TabIndex = 24;
+            // 
             // frmUpdateCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.btnUpdateCustomer);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -320,6 +331,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -351,5 +363,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

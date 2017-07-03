@@ -83,7 +83,7 @@
             this.txtSearchYearlyPremium.Location = new System.Drawing.Point(156, 77);
             this.txtSearchYearlyPremium.Name = "txtSearchYearlyPremium";
             this.txtSearchYearlyPremium.Size = new System.Drawing.Size(100, 20);
-            this.txtSearchYearlyPremium.TabIndex = 21;
+            this.txtSearchYearlyPremium.TabIndex = 2;
             // 
             // cbSearchOperator
             // 
@@ -93,10 +93,10 @@
             "<",
             "=",
             ">"});
-            this.cbSearchOperator.Location = new System.Drawing.Point(111, 76);
+            this.cbSearchOperator.Location = new System.Drawing.Point(111, 77);
             this.cbSearchOperator.Name = "cbSearchOperator";
             this.cbSearchOperator.Size = new System.Drawing.Size(39, 21);
-            this.cbSearchOperator.TabIndex = 20;
+            this.cbSearchOperator.TabIndex = 1;
             this.cbSearchOperator.UseWaitCursor = true;
             // 
             // txtSearchFirstName
@@ -104,16 +104,16 @@
             this.txtSearchFirstName.Location = new System.Drawing.Point(156, 46);
             this.txtSearchFirstName.Name = "txtSearchFirstName";
             this.txtSearchFirstName.Size = new System.Drawing.Size(100, 20);
-            this.txtSearchFirstName.TabIndex = 9;
+            this.txtSearchFirstName.TabIndex = 0;
             // 
             // rbSearchProductName
             // 
             this.rbSearchProductName.AutoSize = true;
             this.rbSearchProductName.Location = new System.Drawing.Point(8, 47);
             this.rbSearchProductName.Name = "rbSearchProductName";
-            this.rbSearchProductName.Size = new System.Drawing.Size(93, 17);
+            this.rbSearchProductName.Size = new System.Drawing.Size(96, 17);
             this.rbSearchProductName.TabIndex = 6;
-            this.rbSearchProductName.Text = "Product Name";
+            this.rbSearchProductName.Text = "Product Name:";
             this.rbSearchProductName.UseVisualStyleBackColor = true;
             // 
             // rbShowAll
@@ -122,10 +122,10 @@
             this.rbShowAll.Checked = true;
             this.rbShowAll.Location = new System.Drawing.Point(8, 15);
             this.rbShowAll.Name = "rbShowAll";
-            this.rbShowAll.Size = new System.Drawing.Size(117, 17);
+            this.rbShowAll.Size = new System.Drawing.Size(113, 17);
             this.rbShowAll.TabIndex = 7;
             this.rbShowAll.TabStop = true;
-            this.rbShowAll.Text = "Show all Customers";
+            this.rbShowAll.Text = "Show all Products:";
             this.rbShowAll.UseVisualStyleBackColor = true;
             // 
             // rbSearchYearlyPremium
@@ -133,9 +133,9 @@
             this.rbSearchYearlyPremium.AutoSize = true;
             this.rbSearchYearlyPremium.Location = new System.Drawing.Point(8, 79);
             this.rbSearchYearlyPremium.Name = "rbSearchYearlyPremium";
-            this.rbSearchYearlyPremium.Size = new System.Drawing.Size(97, 17);
+            this.rbSearchYearlyPremium.Size = new System.Drawing.Size(100, 17);
             this.rbSearchYearlyPremium.TabIndex = 8;
-            this.rbSearchYearlyPremium.Text = "Yearly Premium";
+            this.rbSearchYearlyPremium.Text = "Yearly Premium:";
             this.rbSearchYearlyPremium.UseVisualStyleBackColor = true;
             // 
             // btnAddProduct
@@ -144,7 +144,7 @@
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(105, 23);
             this.btnAddProduct.TabIndex = 0;
-            this.btnAddProduct.Text = "&Add Products";
+            this.btnAddProduct.Text = "Add Products";
             this.btnAddProduct.UseVisualStyleBackColor = true;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
@@ -153,8 +153,8 @@
             this.btnDeleteProduct.Location = new System.Drawing.Point(145, 46);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(105, 23);
-            this.btnDeleteProduct.TabIndex = 5;
-            this.btnDeleteProduct.Text = "&Delete Products";
+            this.btnDeleteProduct.TabIndex = 1;
+            this.btnDeleteProduct.Text = "Delete Products";
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
             this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
             // 
@@ -164,7 +164,7 @@
             this.btnSearchProduct.Name = "btnSearchProduct";
             this.btnSearchProduct.Size = new System.Drawing.Size(105, 23);
             this.btnSearchProduct.TabIndex = 3;
-            this.btnSearchProduct.Text = "&Search Products";
+            this.btnSearchProduct.Text = "Search Products";
             this.btnSearchProduct.UseVisualStyleBackColor = true;
             this.btnSearchProduct.Click += new System.EventHandler(this.btnSearchProduct_Click);
             // 
@@ -173,8 +173,8 @@
             this.btnUpdateProduct.Location = new System.Drawing.Point(256, 46);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
             this.btnUpdateProduct.Size = new System.Drawing.Size(105, 23);
-            this.btnUpdateProduct.TabIndex = 4;
-            this.btnUpdateProduct.Text = "&Update Products";
+            this.btnUpdateProduct.TabIndex = 2;
+            this.btnUpdateProduct.Text = "Update Products";
             this.btnUpdateProduct.UseVisualStyleBackColor = true;
             this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
@@ -195,6 +195,7 @@
             this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProducts.Size = new System.Drawing.Size(934, 499);
             this.dgvProducts.TabIndex = 9;
+            this.dgvProducts.TabStop = false;
             // 
             // ProductID
             // 

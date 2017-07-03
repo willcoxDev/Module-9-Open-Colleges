@@ -61,7 +61,7 @@
             this.btnAddCustomers.Name = "btnAddCustomers";
             this.btnAddCustomers.Size = new System.Drawing.Size(105, 23);
             this.btnAddCustomers.TabIndex = 0;
-            this.btnAddCustomers.Text = "&Add Customers";
+            this.btnAddCustomers.Text = "Add Customers";
             this.btnAddCustomers.UseVisualStyleBackColor = true;
             this.btnAddCustomers.Click += new System.EventHandler(this.btnAddCustomers_Click);
             // 
@@ -71,7 +71,7 @@
             this.btnSearchCustomers.Name = "btnSearchCustomers";
             this.btnSearchCustomers.Size = new System.Drawing.Size(105, 23);
             this.btnSearchCustomers.TabIndex = 3;
-            this.btnSearchCustomers.Text = "&Search Customers";
+            this.btnSearchCustomers.Text = "Search Customers";
             this.btnSearchCustomers.UseVisualStyleBackColor = true;
             this.btnSearchCustomers.Click += new System.EventHandler(this.btnSearchCustomers_Click);
             // 
@@ -80,8 +80,8 @@
             this.btnUpdateCustomers.Location = new System.Drawing.Point(256, 46);
             this.btnUpdateCustomers.Name = "btnUpdateCustomers";
             this.btnUpdateCustomers.Size = new System.Drawing.Size(105, 23);
-            this.btnUpdateCustomers.TabIndex = 4;
-            this.btnUpdateCustomers.Text = "&Update Customers";
+            this.btnUpdateCustomers.TabIndex = 2;
+            this.btnUpdateCustomers.Text = "Update Customers";
             this.btnUpdateCustomers.UseVisualStyleBackColor = true;
             this.btnUpdateCustomers.Click += new System.EventHandler(this.btnUpdateCustomers_Click);
             // 
@@ -90,8 +90,8 @@
             this.btnDeleteCustomers.Location = new System.Drawing.Point(145, 46);
             this.btnDeleteCustomers.Name = "btnDeleteCustomers";
             this.btnDeleteCustomers.Size = new System.Drawing.Size(105, 23);
-            this.btnDeleteCustomers.TabIndex = 5;
-            this.btnDeleteCustomers.Text = "&Delete Customers";
+            this.btnDeleteCustomers.TabIndex = 1;
+            this.btnDeleteCustomers.Text = "Delete Customers";
             this.btnDeleteCustomers.UseVisualStyleBackColor = true;
             this.btnDeleteCustomers.Click += new System.EventHandler(this.btnDeleteCustomers_Click);
             // 
@@ -137,14 +137,14 @@
             this.cbState.Location = new System.Drawing.Point(109, 76);
             this.cbState.Name = "cbState";
             this.cbState.Size = new System.Drawing.Size(100, 21);
-            this.cbState.TabIndex = 19;
+            this.cbState.TabIndex = 1;
             // 
             // txtSearchFirstName
             // 
             this.txtSearchFirstName.Location = new System.Drawing.Point(109, 45);
             this.txtSearchFirstName.Name = "txtSearchFirstName";
             this.txtSearchFirstName.Size = new System.Drawing.Size(100, 20);
-            this.txtSearchFirstName.TabIndex = 9;
+            this.txtSearchFirstName.TabIndex = 0;
             // 
             // rbSearchFirstName
             // 
@@ -162,10 +162,10 @@
             this.rbShowAll.Checked = true;
             this.rbShowAll.Location = new System.Drawing.Point(8, 15);
             this.rbShowAll.Name = "rbShowAll";
-            this.rbShowAll.Size = new System.Drawing.Size(117, 17);
+            this.rbShowAll.Size = new System.Drawing.Size(120, 17);
             this.rbShowAll.TabIndex = 7;
             this.rbShowAll.TabStop = true;
-            this.rbShowAll.Text = "Show all Customers";
+            this.rbShowAll.Text = "Show all Customers:";
             this.rbShowAll.UseVisualStyleBackColor = true;
             // 
             // rbSearchState
@@ -202,6 +202,7 @@
             this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCustomers.Size = new System.Drawing.Size(934, 499);
             this.dgvCustomers.TabIndex = 8;
+            this.dgvCustomers.TabStop = false;
             // 
             // Column1
             // 

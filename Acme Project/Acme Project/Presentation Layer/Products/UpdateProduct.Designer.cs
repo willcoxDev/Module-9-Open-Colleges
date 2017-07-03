@@ -38,7 +38,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnUpdateProduct = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -62,24 +64,24 @@
             // 
             this.cbProductType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProductType.FormattingEnabled = true;
-            this.cbProductType.Location = new System.Drawing.Point(117, 76);
+            this.cbProductType.Location = new System.Drawing.Point(117, 73);
             this.cbProductType.Name = "cbProductType";
             this.cbProductType.Size = new System.Drawing.Size(167, 21);
-            this.cbProductType.TabIndex = 7;
+            this.cbProductType.TabIndex = 1;
             // 
             // txtYearlyPremium
             // 
             this.txtYearlyPremium.Location = new System.Drawing.Point(117, 165);
             this.txtYearlyPremium.Name = "txtYearlyPremium";
             this.txtYearlyPremium.Size = new System.Drawing.Size(167, 20);
-            this.txtYearlyPremium.TabIndex = 6;
+            this.txtYearlyPremium.TabIndex = 3;
             // 
             // txtProductName
             // 
             this.txtProductName.Location = new System.Drawing.Point(117, 119);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(167, 20);
-            this.txtProductName.TabIndex = 5;
+            this.txtProductName.TabIndex = 2;
             // 
             // txtProductID
             // 
@@ -87,7 +89,7 @@
             this.txtProductID.Location = new System.Drawing.Point(117, 27);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(167, 20);
-            this.txtProductID.TabIndex = 4;
+            this.txtProductID.TabIndex = 0;
             // 
             // label4
             // 
@@ -128,20 +130,29 @@
             // 
             // btnUpdateProduct
             // 
-            this.btnUpdateProduct.Location = new System.Drawing.Point(563, 294);
+            this.btnUpdateProduct.Location = new System.Drawing.Point(130, 37);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
             this.btnUpdateProduct.Size = new System.Drawing.Size(127, 23);
-            this.btnUpdateProduct.TabIndex = 24;
+            this.btnUpdateProduct.TabIndex = 0;
             this.btnUpdateProduct.Text = "Update Product";
             this.btnUpdateProduct.UseVisualStyleBackColor = true;
             this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnUpdateProduct);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 511);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(934, 100);
+            this.panel1.TabIndex = 25;
             // 
             // frmUpdateProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.btnUpdateProduct);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmUpdateProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -149,6 +160,7 @@
             this.Load += new System.EventHandler(this.frmUpdateProduct_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -165,5 +177,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnUpdateProduct;
+        private System.Windows.Forms.Panel panel1;
     }
 }

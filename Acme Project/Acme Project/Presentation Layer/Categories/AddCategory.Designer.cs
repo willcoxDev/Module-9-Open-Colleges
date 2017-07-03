@@ -34,7 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddCategories = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -55,14 +57,14 @@
             this.txtCategory.Location = new System.Drawing.Point(117, 73);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(167, 20);
-            this.txtCategory.TabIndex = 5;
+            this.txtCategory.TabIndex = 1;
             // 
             // txtCategoryID
             // 
             this.txtCategoryID.Location = new System.Drawing.Point(117, 27);
             this.txtCategoryID.Name = "txtCategoryID";
             this.txtCategoryID.Size = new System.Drawing.Size(167, 20);
-            this.txtCategoryID.TabIndex = 4;
+            this.txtCategoryID.TabIndex = 0;
             this.txtCategoryID.Visible = false;
             // 
             // label1
@@ -86,26 +88,36 @@
             // 
             // btnAddCategories
             // 
-            this.btnAddCategories.Location = new System.Drawing.Point(590, 285);
+            this.btnAddCategories.Location = new System.Drawing.Point(104, 42);
             this.btnAddCategories.Name = "btnAddCategories";
             this.btnAddCategories.Size = new System.Drawing.Size(105, 23);
-            this.btnAddCategories.TabIndex = 6;
+            this.btnAddCategories.TabIndex = 0;
             this.btnAddCategories.Text = "Add Category";
             this.btnAddCategories.UseVisualStyleBackColor = true;
             this.btnAddCategories.Click += new System.EventHandler(this.btnAddCategories_Click_1);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnAddCategories);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 511);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(934, 100);
+            this.panel1.TabIndex = 12;
             // 
             // frmAddCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.btnAddCategories);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAddCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Category";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -118,5 +130,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Button btnAddCategories;
+        private System.Windows.Forms.Panel panel1;
     }
 }

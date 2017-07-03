@@ -52,7 +52,7 @@
             this.btnProductTypes.Location = new System.Drawing.Point(113, 236);
             this.btnProductTypes.Name = "btnProductTypes";
             this.btnProductTypes.Size = new System.Drawing.Size(101, 23);
-            this.btnProductTypes.TabIndex = 1;
+            this.btnProductTypes.TabIndex = 2;
             this.btnProductTypes.Text = "Product Types";
             this.btnProductTypes.UseVisualStyleBackColor = true;
             this.btnProductTypes.Click += new System.EventHandler(this.btnProductTypes_Click);
@@ -62,7 +62,7 @@
             this.btnProducts.Location = new System.Drawing.Point(113, 191);
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(101, 23);
-            this.btnProducts.TabIndex = 2;
+            this.btnProducts.TabIndex = 1;
             this.btnProducts.Text = "Products";
             this.btnProducts.UseVisualStyleBackColor = true;
             this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
@@ -72,7 +72,7 @@
             this.btnCategories.Location = new System.Drawing.Point(113, 326);
             this.btnCategories.Name = "btnCategories";
             this.btnCategories.Size = new System.Drawing.Size(101, 23);
-            this.btnCategories.TabIndex = 3;
+            this.btnCategories.TabIndex = 4;
             this.btnCategories.Text = "Categories";
             this.btnCategories.UseVisualStyleBackColor = true;
             this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
@@ -82,7 +82,7 @@
             this.btnSales.Location = new System.Drawing.Point(113, 281);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(101, 23);
-            this.btnSales.TabIndex = 4;
+            this.btnSales.TabIndex = 3;
             this.btnSales.Text = "Sales";
             this.btnSales.UseVisualStyleBackColor = true;
             this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
@@ -95,6 +95,7 @@
             this.btnTutorial.TabIndex = 5;
             this.btnTutorial.Text = "Tutorial";
             this.btnTutorial.UseVisualStyleBackColor = true;
+            this.btnTutorial.Click += new System.EventHandler(this.btnTutorial_Click);
             // 
             // btnAbout
             // 
@@ -104,6 +105,7 @@
             this.btnAbout.TabIndex = 6;
             this.btnAbout.Text = "About";
             this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // frmMaintenance
             // 
