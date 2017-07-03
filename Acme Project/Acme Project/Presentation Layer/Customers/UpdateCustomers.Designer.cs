@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             this.btnUpdateCustomer = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.grpUpdateCustomerOfficeUseOnly = new System.Windows.Forms.GroupBox();
+            this.lblCustomerID = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.grpUpdateCustomerAddress = new System.Windows.Forms.GroupBox();
             this.cbState = new System.Windows.Forms.ComboBox();
             this.txtPostcode = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblSuburb = new System.Windows.Forms.Label();
             this.txtSuburb = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblState = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblPostcode = new System.Windows.Forms.Label();
+            this.grpUpdateCustomerDetails = new System.Windows.Forms.GroupBox();
             this.rbFemale = new System.Windows.Forms.RadioButton();
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.cbCategoryID = new System.Windows.Forms.ComboBox();
             this.dtBirthDate = new System.Windows.Forms.DateTimePicker();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.lblBirthDate = new System.Windows.Forms.Label();
+            this.lblCategory = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.pnlUpdateCustomer = new System.Windows.Forms.Panel();
+            this.grpUpdateCustomerOfficeUseOnly.SuspendLayout();
+            this.grpUpdateCustomerAddress.SuspendLayout();
+            this.grpUpdateCustomerDetails.SuspendLayout();
+            this.pnlUpdateCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUpdateCustomer
@@ -70,25 +70,25 @@
             this.btnUpdateCustomer.UseVisualStyleBackColor = true;
             this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
             // 
-            // groupBox2
+            // grpUpdateCustomerOfficeUseOnly
             // 
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txtCustomerID);
-            this.groupBox2.Location = new System.Drawing.Point(496, 118);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(360, 66);
-            this.groupBox2.TabIndex = 22;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Office Use Only";
+            this.grpUpdateCustomerOfficeUseOnly.Controls.Add(this.lblCustomerID);
+            this.grpUpdateCustomerOfficeUseOnly.Controls.Add(this.txtCustomerID);
+            this.grpUpdateCustomerOfficeUseOnly.Location = new System.Drawing.Point(496, 118);
+            this.grpUpdateCustomerOfficeUseOnly.Name = "grpUpdateCustomerOfficeUseOnly";
+            this.grpUpdateCustomerOfficeUseOnly.Size = new System.Drawing.Size(360, 66);
+            this.grpUpdateCustomerOfficeUseOnly.TabIndex = 22;
+            this.grpUpdateCustomerOfficeUseOnly.TabStop = false;
+            this.grpUpdateCustomerOfficeUseOnly.Text = "Office Use Only";
             // 
-            // label10
+            // lblCustomerID
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(28, 27);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 13);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Customer ID:";
+            this.lblCustomerID.AutoSize = true;
+            this.lblCustomerID.Location = new System.Drawing.Point(28, 27);
+            this.lblCustomerID.Name = "lblCustomerID";
+            this.lblCustomerID.Size = new System.Drawing.Size(68, 13);
+            this.lblCustomerID.TabIndex = 10;
+            this.lblCustomerID.Text = "Customer ID:";
             // 
             // txtCustomerID
             // 
@@ -97,22 +97,22 @@
             this.txtCustomerID.Size = new System.Drawing.Size(100, 20);
             this.txtCustomerID.TabIndex = 0;
             // 
-            // groupBox3
+            // grpUpdateCustomerAddress
             // 
-            this.groupBox3.Controls.Add(this.cbState);
-            this.groupBox3.Controls.Add(this.txtPostcode);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.txtSuburb);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.txtAddress);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(79, 361);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(370, 132);
-            this.groupBox3.TabIndex = 21;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Customer Address";
+            this.grpUpdateCustomerAddress.Controls.Add(this.cbState);
+            this.grpUpdateCustomerAddress.Controls.Add(this.txtPostcode);
+            this.grpUpdateCustomerAddress.Controls.Add(this.lblAddress);
+            this.grpUpdateCustomerAddress.Controls.Add(this.lblSuburb);
+            this.grpUpdateCustomerAddress.Controls.Add(this.txtSuburb);
+            this.grpUpdateCustomerAddress.Controls.Add(this.lblState);
+            this.grpUpdateCustomerAddress.Controls.Add(this.txtAddress);
+            this.grpUpdateCustomerAddress.Controls.Add(this.lblPostcode);
+            this.grpUpdateCustomerAddress.Location = new System.Drawing.Point(79, 361);
+            this.grpUpdateCustomerAddress.Name = "grpUpdateCustomerAddress";
+            this.grpUpdateCustomerAddress.Size = new System.Drawing.Size(370, 132);
+            this.grpUpdateCustomerAddress.TabIndex = 21;
+            this.grpUpdateCustomerAddress.TabStop = false;
+            this.grpUpdateCustomerAddress.Text = "Customer Address";
             // 
             // cbState
             // 
@@ -125,7 +125,7 @@
             "NT",
             "WA",
             "TAS"});
-            this.cbState.Location = new System.Drawing.Point(120, 74);
+            this.cbState.Location = new System.Drawing.Point(120, 76);
             this.cbState.Name = "cbState";
             this.cbState.Size = new System.Drawing.Size(100, 21);
             this.cbState.TabIndex = 2;
@@ -137,80 +137,80 @@
             this.txtPostcode.Size = new System.Drawing.Size(100, 20);
             this.txtPostcode.TabIndex = 3;
             // 
-            // label9
+            // lblAddress
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(28, 27);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Address:";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(28, 27);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(48, 13);
+            this.lblAddress.TabIndex = 10;
+            this.lblAddress.Text = "Address:";
             // 
-            // label8
+            // lblSuburb
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(28, 49);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Surburb:";
+            this.lblSuburb.AutoSize = true;
+            this.lblSuburb.Location = new System.Drawing.Point(28, 53);
+            this.lblSuburb.Name = "lblSuburb";
+            this.lblSuburb.Size = new System.Drawing.Size(47, 13);
+            this.lblSuburb.TabIndex = 11;
+            this.lblSuburb.Text = "Surburb:";
             // 
             // txtSuburb
             // 
-            this.txtSuburb.Location = new System.Drawing.Point(120, 46);
+            this.txtSuburb.Location = new System.Drawing.Point(120, 50);
             this.txtSuburb.Name = "txtSuburb";
             this.txtSuburb.Size = new System.Drawing.Size(100, 20);
             this.txtSuburb.TabIndex = 1;
             // 
-            // label7
+            // lblState
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 77);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "State:";
+            this.lblState.AutoSize = true;
+            this.lblState.Location = new System.Drawing.Point(29, 79);
+            this.lblState.Name = "lblState";
+            this.lblState.Size = new System.Drawing.Size(35, 13);
+            this.lblState.TabIndex = 12;
+            this.lblState.Text = "State:";
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(120, 20);
+            this.txtAddress.Location = new System.Drawing.Point(120, 24);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(100, 20);
             this.txtAddress.TabIndex = 0;
             // 
-            // label6
+            // lblPostcode
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 105);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Postcode:";
+            this.lblPostcode.AutoSize = true;
+            this.lblPostcode.Location = new System.Drawing.Point(28, 105);
+            this.lblPostcode.Name = "lblPostcode";
+            this.lblPostcode.Size = new System.Drawing.Size(55, 13);
+            this.lblPostcode.TabIndex = 13;
+            this.lblPostcode.Text = "Postcode:";
             // 
-            // groupBox1
+            // grpUpdateCustomerDetails
             // 
-            this.groupBox1.Controls.Add(this.rbFemale);
-            this.groupBox1.Controls.Add(this.rbMale);
-            this.groupBox1.Controls.Add(this.cbCategoryID);
-            this.groupBox1.Controls.Add(this.dtBirthDate);
-            this.groupBox1.Controls.Add(this.txtLastName);
-            this.groupBox1.Controls.Add(this.txtFirstName);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(79, 118);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(370, 166);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Customer Details";
+            this.grpUpdateCustomerDetails.Controls.Add(this.rbFemale);
+            this.grpUpdateCustomerDetails.Controls.Add(this.rbMale);
+            this.grpUpdateCustomerDetails.Controls.Add(this.cbCategoryID);
+            this.grpUpdateCustomerDetails.Controls.Add(this.dtBirthDate);
+            this.grpUpdateCustomerDetails.Controls.Add(this.txtLastName);
+            this.grpUpdateCustomerDetails.Controls.Add(this.txtFirstName);
+            this.grpUpdateCustomerDetails.Controls.Add(this.lblBirthDate);
+            this.grpUpdateCustomerDetails.Controls.Add(this.lblCategory);
+            this.grpUpdateCustomerDetails.Controls.Add(this.lblGender);
+            this.grpUpdateCustomerDetails.Controls.Add(this.lblLastName);
+            this.grpUpdateCustomerDetails.Controls.Add(this.lblFirstName);
+            this.grpUpdateCustomerDetails.Location = new System.Drawing.Point(79, 118);
+            this.grpUpdateCustomerDetails.Name = "grpUpdateCustomerDetails";
+            this.grpUpdateCustomerDetails.Size = new System.Drawing.Size(370, 166);
+            this.grpUpdateCustomerDetails.TabIndex = 20;
+            this.grpUpdateCustomerDetails.TabStop = false;
+            this.grpUpdateCustomerDetails.Text = "Customer Details";
             // 
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(163, 75);
+            this.rbFemale.Location = new System.Drawing.Point(163, 77);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(59, 17);
             this.rbFemale.TabIndex = 3;
@@ -221,7 +221,7 @@
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(109, 75);
+            this.rbMale.Location = new System.Drawing.Point(109, 77);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(48, 17);
             this.rbMale.TabIndex = 2;
@@ -232,106 +232,106 @@
             // cbCategoryID
             // 
             this.cbCategoryID.FormattingEnabled = true;
-            this.cbCategoryID.Location = new System.Drawing.Point(109, 105);
+            this.cbCategoryID.Location = new System.Drawing.Point(109, 102);
             this.cbCategoryID.Name = "cbCategoryID";
             this.cbCategoryID.Size = new System.Drawing.Size(121, 21);
             this.cbCategoryID.TabIndex = 4;
             // 
             // dtBirthDate
             // 
-            this.dtBirthDate.Location = new System.Drawing.Point(109, 134);
+            this.dtBirthDate.Location = new System.Drawing.Point(109, 128);
             this.dtBirthDate.Name = "dtBirthDate";
             this.dtBirthDate.Size = new System.Drawing.Size(200, 20);
             this.dtBirthDate.TabIndex = 5;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(109, 46);
+            this.txtLastName.Location = new System.Drawing.Point(109, 50);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(100, 20);
             this.txtLastName.TabIndex = 1;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(109, 20);
+            this.txtFirstName.Location = new System.Drawing.Point(109, 24);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
             this.txtFirstName.TabIndex = 0;
             // 
-            // label5
+            // lblBirthDate
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 134);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Birth Date:";
+            this.lblBirthDate.AutoSize = true;
+            this.lblBirthDate.Location = new System.Drawing.Point(17, 131);
+            this.lblBirthDate.Name = "lblBirthDate";
+            this.lblBirthDate.Size = new System.Drawing.Size(57, 13);
+            this.lblBirthDate.TabIndex = 4;
+            this.lblBirthDate.Text = "Birth Date:";
             // 
-            // label4
+            // lblCategory
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Category :";
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Location = new System.Drawing.Point(17, 105);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(55, 13);
+            this.lblCategory.TabIndex = 3;
+            this.lblCategory.Text = "Category :";
             // 
-            // label3
+            // lblGender
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Gender:";
+            this.lblGender.AutoSize = true;
+            this.lblGender.Location = new System.Drawing.Point(17, 79);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(45, 13);
+            this.lblGender.TabIndex = 2;
+            this.lblGender.Text = "Gender:";
             // 
-            // label2
+            // lblLastName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Last Name:";
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Location = new System.Drawing.Point(17, 53);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(61, 13);
+            this.lblLastName.TabIndex = 1;
+            this.lblLastName.Text = "Last Name:";
             // 
-            // label1
+            // lblFirstName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "First Name:";
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Location = new System.Drawing.Point(17, 27);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(60, 13);
+            this.lblFirstName.TabIndex = 0;
+            this.lblFirstName.Text = "First Name:";
             // 
-            // panel1
+            // pnlUpdateCustomer
             // 
-            this.panel1.Controls.Add(this.btnUpdateCustomer);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 511);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(934, 100);
-            this.panel1.TabIndex = 24;
+            this.pnlUpdateCustomer.Controls.Add(this.btnUpdateCustomer);
+            this.pnlUpdateCustomer.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlUpdateCustomer.Location = new System.Drawing.Point(0, 511);
+            this.pnlUpdateCustomer.Name = "pnlUpdateCustomer";
+            this.pnlUpdateCustomer.Size = new System.Drawing.Size(934, 100);
+            this.pnlUpdateCustomer.TabIndex = 24;
             // 
             // frmUpdateCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pnlUpdateCustomer);
+            this.Controls.Add(this.grpUpdateCustomerOfficeUseOnly);
+            this.Controls.Add(this.grpUpdateCustomerAddress);
+            this.Controls.Add(this.grpUpdateCustomerDetails);
             this.Name = "frmUpdateCustomers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Customers";
             this.Load += new System.EventHandler(this.frmUpdateCustomers_Load);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.grpUpdateCustomerOfficeUseOnly.ResumeLayout(false);
+            this.grpUpdateCustomerOfficeUseOnly.PerformLayout();
+            this.grpUpdateCustomerAddress.ResumeLayout(false);
+            this.grpUpdateCustomerAddress.PerformLayout();
+            this.grpUpdateCustomerDetails.ResumeLayout(false);
+            this.grpUpdateCustomerDetails.PerformLayout();
+            this.pnlUpdateCustomer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -339,30 +339,30 @@
         #endregion
 
         private System.Windows.Forms.Button btnUpdateCustomer;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox grpUpdateCustomerOfficeUseOnly;
+        private System.Windows.Forms.Label lblCustomerID;
         private System.Windows.Forms.TextBox txtCustomerID;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox grpUpdateCustomerAddress;
         private System.Windows.Forms.ComboBox cbState;
         private System.Windows.Forms.TextBox txtPostcode;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblSuburb;
         private System.Windows.Forms.TextBox txtSuburb;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblState;
         private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblPostcode;
+        private System.Windows.Forms.GroupBox grpUpdateCustomerDetails;
         private System.Windows.Forms.RadioButton rbFemale;
         private System.Windows.Forms.RadioButton rbMale;
         private System.Windows.Forms.ComboBox cbCategoryID;
         private System.Windows.Forms.DateTimePicker dtBirthDate;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblBirthDate;
+        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.Label lblGender;
+        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.Panel pnlUpdateCustomer;
     }
 }

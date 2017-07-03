@@ -192,6 +192,46 @@ namespace Acme_Project
             }
             cbCategoryID.SelectedValue = 0; //set the Category Box to display nothing when the program starts.
         }
+
+        private void lblFirstName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLastName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblGender_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCategory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBirthDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAddress_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSuburb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblState_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

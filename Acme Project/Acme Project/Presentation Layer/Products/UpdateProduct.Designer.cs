@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpUpdateProduct = new System.Windows.Forms.GroupBox();
             this.cbProductType = new System.Windows.Forms.ComboBox();
             this.txtYearlyPremium = new System.Windows.Forms.TextBox();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.txtProductID = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblYearlyPremium = new System.Windows.Forms.Label();
+            this.lblProductID = new System.Windows.Forms.Label();
+            this.lblProductName = new System.Windows.Forms.Label();
+            this.lblProductType = new System.Windows.Forms.Label();
             this.btnUpdateProduct = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlUpdateProduct = new System.Windows.Forms.Panel();
+            this.grpUpdateProduct.SuspendLayout();
+            this.pnlUpdateProduct.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpUpdateProduct
             // 
-            this.groupBox1.Controls.Add(this.cbProductType);
-            this.groupBox1.Controls.Add(this.txtYearlyPremium);
-            this.groupBox1.Controls.Add(this.txtProductName);
-            this.groupBox1.Controls.Add(this.txtProductID);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(130, 201);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(378, 209);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add Product";
+            this.grpUpdateProduct.Controls.Add(this.cbProductType);
+            this.grpUpdateProduct.Controls.Add(this.txtYearlyPremium);
+            this.grpUpdateProduct.Controls.Add(this.txtProductName);
+            this.grpUpdateProduct.Controls.Add(this.txtProductID);
+            this.grpUpdateProduct.Controls.Add(this.lblYearlyPremium);
+            this.grpUpdateProduct.Controls.Add(this.lblProductID);
+            this.grpUpdateProduct.Controls.Add(this.lblProductName);
+            this.grpUpdateProduct.Controls.Add(this.lblProductType);
+            this.grpUpdateProduct.Location = new System.Drawing.Point(130, 188);
+            this.grpUpdateProduct.Name = "grpUpdateProduct";
+            this.grpUpdateProduct.Size = new System.Drawing.Size(378, 209);
+            this.grpUpdateProduct.TabIndex = 5;
+            this.grpUpdateProduct.TabStop = false;
+            this.grpUpdateProduct.Text = "Add Product";
             // 
             // cbProductType
             // 
@@ -91,42 +91,42 @@
             this.txtProductID.Size = new System.Drawing.Size(167, 20);
             this.txtProductID.TabIndex = 0;
             // 
-            // label4
+            // lblYearlyPremium
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 168);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Yearly Premium:";
+            this.lblYearlyPremium.AutoSize = true;
+            this.lblYearlyPremium.Location = new System.Drawing.Point(19, 168);
+            this.lblYearlyPremium.Name = "lblYearlyPremium";
+            this.lblYearlyPremium.Size = new System.Drawing.Size(82, 13);
+            this.lblYearlyPremium.TabIndex = 3;
+            this.lblYearlyPremium.Text = "Yearly Premium:";
             // 
-            // label1
+            // lblProductID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Enabled = false;
-            this.label1.Location = new System.Drawing.Point(19, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Product ID:";
+            this.lblProductID.AutoSize = true;
+            this.lblProductID.Enabled = false;
+            this.lblProductID.Location = new System.Drawing.Point(19, 30);
+            this.lblProductID.Name = "lblProductID";
+            this.lblProductID.Size = new System.Drawing.Size(61, 13);
+            this.lblProductID.TabIndex = 0;
+            this.lblProductID.Text = "Product ID:";
             // 
-            // label3
+            // lblProductName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 122);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Product Name:";
+            this.lblProductName.AutoSize = true;
+            this.lblProductName.Location = new System.Drawing.Point(19, 122);
+            this.lblProductName.Name = "lblProductName";
+            this.lblProductName.Size = new System.Drawing.Size(78, 13);
+            this.lblProductName.TabIndex = 2;
+            this.lblProductName.Text = "Product Name:";
             // 
-            // label2
+            // lblProductType
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Product Type:";
+            this.lblProductType.AutoSize = true;
+            this.lblProductType.Location = new System.Drawing.Point(19, 76);
+            this.lblProductType.Name = "lblProductType";
+            this.lblProductType.Size = new System.Drawing.Size(74, 13);
+            this.lblProductType.TabIndex = 1;
+            this.lblProductType.Text = "Product Type:";
             // 
             // btnUpdateProduct
             // 
@@ -138,45 +138,45 @@
             this.btnUpdateProduct.UseVisualStyleBackColor = true;
             this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
-            // panel1
+            // pnlUpdateProduct
             // 
-            this.panel1.Controls.Add(this.btnUpdateProduct);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 511);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(934, 100);
-            this.panel1.TabIndex = 25;
+            this.pnlUpdateProduct.Controls.Add(this.btnUpdateProduct);
+            this.pnlUpdateProduct.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlUpdateProduct.Location = new System.Drawing.Point(0, 511);
+            this.pnlUpdateProduct.Name = "pnlUpdateProduct";
+            this.pnlUpdateProduct.Size = new System.Drawing.Size(934, 100);
+            this.pnlUpdateProduct.TabIndex = 25;
             // 
             // frmUpdateProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pnlUpdateProduct);
+            this.Controls.Add(this.grpUpdateProduct);
             this.Name = "frmUpdateProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Product";
             this.Load += new System.EventHandler(this.frmUpdateProduct_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.grpUpdateProduct.ResumeLayout(false);
+            this.grpUpdateProduct.PerformLayout();
+            this.pnlUpdateProduct.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpUpdateProduct;
         private System.Windows.Forms.ComboBox cbProductType;
         private System.Windows.Forms.TextBox txtYearlyPremium;
         private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.TextBox txtProductID;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblYearlyPremium;
+        private System.Windows.Forms.Label lblProductID;
+        private System.Windows.Forms.Label lblProductName;
+        private System.Windows.Forms.Label lblProductType;
         private System.Windows.Forms.Button btnUpdateProduct;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlUpdateProduct;
     }
 }

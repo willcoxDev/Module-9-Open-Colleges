@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.btnUpdateProductTypes = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpUpdateProductTypes = new System.Windows.Forms.GroupBox();
             this.txtProductType = new System.Windows.Forms.TextBox();
             this.txtProductTypeID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.lblProductTypeID = new System.Windows.Forms.Label();
+            this.lblProductType = new System.Windows.Forms.Label();
+            this.pnlUpdateProductTypes = new System.Windows.Forms.Panel();
+            this.grpUpdateProductTypes.SuspendLayout();
+            this.pnlUpdateProductTypes.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUpdateProductTypes
@@ -49,18 +49,18 @@
             this.btnUpdateProductTypes.UseVisualStyleBackColor = true;
             this.btnUpdateProductTypes.Click += new System.EventHandler(this.btnUpdateProductTypes_Click);
             // 
-            // groupBox1
+            // grpUpdateProductTypes
             // 
-            this.groupBox1.Controls.Add(this.txtProductType);
-            this.groupBox1.Controls.Add(this.txtProductTypeID);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(111, 224);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(378, 126);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add Product Type";
+            this.grpUpdateProductTypes.Controls.Add(this.txtProductType);
+            this.grpUpdateProductTypes.Controls.Add(this.txtProductTypeID);
+            this.grpUpdateProductTypes.Controls.Add(this.lblProductTypeID);
+            this.grpUpdateProductTypes.Controls.Add(this.lblProductType);
+            this.grpUpdateProductTypes.Location = new System.Drawing.Point(111, 224);
+            this.grpUpdateProductTypes.Name = "grpUpdateProductTypes";
+            this.grpUpdateProductTypes.Size = new System.Drawing.Size(378, 126);
+            this.grpUpdateProductTypes.TabIndex = 10;
+            this.grpUpdateProductTypes.TabStop = false;
+            this.grpUpdateProductTypes.Text = "Add Product Type";
             // 
             // txtProductType
             // 
@@ -77,46 +77,46 @@
             this.txtProductTypeID.Size = new System.Drawing.Size(167, 20);
             this.txtProductTypeID.TabIndex = 0;
             // 
-            // label1
+            // lblProductTypeID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Product Type ID:";
+            this.lblProductTypeID.AutoSize = true;
+            this.lblProductTypeID.Location = new System.Drawing.Point(19, 30);
+            this.lblProductTypeID.Name = "lblProductTypeID";
+            this.lblProductTypeID.Size = new System.Drawing.Size(88, 13);
+            this.lblProductTypeID.TabIndex = 0;
+            this.lblProductTypeID.Text = "Product Type ID:";
             // 
-            // label2
+            // lblProductType
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Product Type:";
+            this.lblProductType.AutoSize = true;
+            this.lblProductType.Location = new System.Drawing.Point(19, 76);
+            this.lblProductType.Name = "lblProductType";
+            this.lblProductType.Size = new System.Drawing.Size(74, 13);
+            this.lblProductType.TabIndex = 1;
+            this.lblProductType.Text = "Product Type:";
             // 
-            // panel1
+            // pnlUpdateProductTypes
             // 
-            this.panel1.Controls.Add(this.btnUpdateProductTypes);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 511);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(934, 100);
-            this.panel1.TabIndex = 11;
+            this.pnlUpdateProductTypes.Controls.Add(this.btnUpdateProductTypes);
+            this.pnlUpdateProductTypes.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlUpdateProductTypes.Location = new System.Drawing.Point(0, 511);
+            this.pnlUpdateProductTypes.Name = "pnlUpdateProductTypes";
+            this.pnlUpdateProductTypes.Size = new System.Drawing.Size(934, 100);
+            this.pnlUpdateProductTypes.TabIndex = 11;
             // 
             // frmUpdateProductTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pnlUpdateProductTypes);
+            this.Controls.Add(this.grpUpdateProductTypes);
             this.Name = "frmUpdateProductTypes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Product Types";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.grpUpdateProductTypes.ResumeLayout(false);
+            this.grpUpdateProductTypes.PerformLayout();
+            this.pnlUpdateProductTypes.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -124,11 +124,11 @@
         #endregion
 
         private System.Windows.Forms.Button btnUpdateProductTypes;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpUpdateProductTypes;
         private System.Windows.Forms.TextBox txtProductType;
         private System.Windows.Forms.TextBox txtProductTypeID;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblProductTypeID;
+        private System.Windows.Forms.Label lblProductType;
+        private System.Windows.Forms.Panel pnlUpdateProductTypes;
     }
 }

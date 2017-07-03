@@ -28,41 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpUpdateSales = new System.Windows.Forms.GroupBox();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.cbPayable = new System.Windows.Forms.ComboBox();
             this.dtStartDate = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblStartDate = new System.Windows.Forms.Label();
             this.txtProductID = new System.Windows.Forms.TextBox();
             this.txtSaleID = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPayable = new System.Windows.Forms.Label();
+            this.lblSaleID = new System.Windows.Forms.Label();
+            this.lblProductID = new System.Windows.Forms.Label();
+            this.lblCustomerID = new System.Windows.Forms.Label();
             this.btnUpdateSale = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlUpdateSales = new System.Windows.Forms.Panel();
+            this.grpUpdateSales.SuspendLayout();
+            this.pnlUpdateSales.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpUpdateSales
             // 
-            this.groupBox1.Controls.Add(this.txtCustomerID);
-            this.groupBox1.Controls.Add(this.cbPayable);
-            this.groupBox1.Controls.Add(this.dtStartDate);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtProductID);
-            this.groupBox1.Controls.Add(this.txtSaleID);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(124, 185);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(378, 241);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add Sales";
+            this.grpUpdateSales.Controls.Add(this.txtCustomerID);
+            this.grpUpdateSales.Controls.Add(this.cbPayable);
+            this.grpUpdateSales.Controls.Add(this.dtStartDate);
+            this.grpUpdateSales.Controls.Add(this.lblStartDate);
+            this.grpUpdateSales.Controls.Add(this.txtProductID);
+            this.grpUpdateSales.Controls.Add(this.txtSaleID);
+            this.grpUpdateSales.Controls.Add(this.lblPayable);
+            this.grpUpdateSales.Controls.Add(this.lblSaleID);
+            this.grpUpdateSales.Controls.Add(this.lblProductID);
+            this.grpUpdateSales.Controls.Add(this.lblCustomerID);
+            this.grpUpdateSales.Location = new System.Drawing.Point(124, 185);
+            this.grpUpdateSales.Name = "grpUpdateSales";
+            this.grpUpdateSales.Size = new System.Drawing.Size(378, 241);
+            this.grpUpdateSales.TabIndex = 6;
+            this.grpUpdateSales.TabStop = false;
+            this.grpUpdateSales.Text = "Update Sales";
             // 
             // txtCustomerID
             // 
@@ -92,14 +92,14 @@
             this.dtStartDate.Size = new System.Drawing.Size(200, 20);
             this.dtStartDate.TabIndex = 1;
             // 
-            // label5
+            // lblStartDate
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 206);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Start Date:";
+            this.lblStartDate.AutoSize = true;
+            this.lblStartDate.Location = new System.Drawing.Point(19, 206);
+            this.lblStartDate.Name = "lblStartDate";
+            this.lblStartDate.Size = new System.Drawing.Size(58, 13);
+            this.lblStartDate.TabIndex = 8;
+            this.lblStartDate.Text = "Start Date:";
             // 
             // txtProductID
             // 
@@ -117,41 +117,41 @@
             this.txtSaleID.Size = new System.Drawing.Size(167, 20);
             this.txtSaleID.TabIndex = 4;
             // 
-            // label4
+            // lblPayable
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 162);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Payable:";
+            this.lblPayable.AutoSize = true;
+            this.lblPayable.Location = new System.Drawing.Point(19, 162);
+            this.lblPayable.Name = "lblPayable";
+            this.lblPayable.Size = new System.Drawing.Size(48, 13);
+            this.lblPayable.TabIndex = 3;
+            this.lblPayable.Text = "Payable:";
             // 
-            // label1
+            // lblSaleID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Sale ID:";
+            this.lblSaleID.AutoSize = true;
+            this.lblSaleID.Location = new System.Drawing.Point(19, 30);
+            this.lblSaleID.Name = "lblSaleID";
+            this.lblSaleID.Size = new System.Drawing.Size(45, 13);
+            this.lblSaleID.TabIndex = 0;
+            this.lblSaleID.Text = "Sale ID:";
             // 
-            // label3
+            // lblProductID
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Product ID:";
+            this.lblProductID.AutoSize = true;
+            this.lblProductID.Location = new System.Drawing.Point(19, 118);
+            this.lblProductID.Name = "lblProductID";
+            this.lblProductID.Size = new System.Drawing.Size(61, 13);
+            this.lblProductID.TabIndex = 2;
+            this.lblProductID.Text = "Product ID:";
             // 
-            // label2
+            // lblCustomerID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Customer ID:";
+            this.lblCustomerID.AutoSize = true;
+            this.lblCustomerID.Location = new System.Drawing.Point(19, 74);
+            this.lblCustomerID.Name = "lblCustomerID";
+            this.lblCustomerID.Size = new System.Drawing.Size(68, 13);
+            this.lblCustomerID.TabIndex = 1;
+            this.lblCustomerID.Text = "Customer ID:";
             // 
             // btnUpdateSale
             // 
@@ -163,46 +163,46 @@
             this.btnUpdateSale.UseVisualStyleBackColor = true;
             this.btnUpdateSale.Click += new System.EventHandler(this.btnUpdateSale_Click);
             // 
-            // panel1
+            // pnlUpdateSales
             // 
-            this.panel1.Controls.Add(this.btnUpdateSale);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 511);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(934, 100);
-            this.panel1.TabIndex = 12;
+            this.pnlUpdateSales.Controls.Add(this.btnUpdateSale);
+            this.pnlUpdateSales.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlUpdateSales.Location = new System.Drawing.Point(0, 511);
+            this.pnlUpdateSales.Name = "pnlUpdateSales";
+            this.pnlUpdateSales.Size = new System.Drawing.Size(934, 100);
+            this.pnlUpdateSales.TabIndex = 12;
             // 
             // frmUpdateSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pnlUpdateSales);
+            this.Controls.Add(this.grpUpdateSales);
             this.Name = "frmUpdateSales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Sales";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.grpUpdateSales.ResumeLayout(false);
+            this.grpUpdateSales.PerformLayout();
+            this.pnlUpdateSales.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpUpdateSales;
         private System.Windows.Forms.TextBox txtCustomerID;
         private System.Windows.Forms.ComboBox cbPayable;
         private System.Windows.Forms.DateTimePicker dtStartDate;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.TextBox txtProductID;
         private System.Windows.Forms.TextBox txtSaleID;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPayable;
+        private System.Windows.Forms.Label lblSaleID;
+        private System.Windows.Forms.Label lblProductID;
+        private System.Windows.Forms.Label lblCustomerID;
         private System.Windows.Forms.Button btnUpdateSale;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlUpdateSales;
     }
 }
