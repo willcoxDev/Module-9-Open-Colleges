@@ -262,7 +262,7 @@
             // 
             // Product
             // 
-            this.Product.DataPropertyName = "Product";
+            this.Product.DataPropertyName = "ProductName";
             this.Product.HeaderText = "Product";
             this.Product.Name = "Product";
             this.Product.ReadOnly = true;
@@ -276,7 +276,7 @@
             // 
             // Column3
             // 
-            this.Column3.DataPropertyName = "NumCus";
+            this.Column3.DataPropertyName = "numSales";
             this.Column3.HeaderText = "Number of Customer Purchases";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -293,6 +293,7 @@
             this.Name = "frmMaintenance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maintenance";
+            this.Load += new System.EventHandler(this.frmMaintenance_Load);
             this.pnlMaintenance.ResumeLayout(false);
             this.menuBar.ResumeLayout(false);
             this.menuBar.PerformLayout();

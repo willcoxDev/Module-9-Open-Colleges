@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business Logic Layer\Dashboard.cs" />
     <Compile Include="Business Logic Layer\Categories.cs" />
     <Compile Include="Business Logic Layer\Customers.cs" />
     <Compile Include="Business Logic Layer\Product.cs" />

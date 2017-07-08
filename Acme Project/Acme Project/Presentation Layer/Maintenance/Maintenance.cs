@@ -16,6 +16,7 @@ using Acme_Project.Presentatin_Layer.Sales;
 using Acme_Project.Presentation_Layer.ProductTypes;
 using Acme_Project.Presentation_Layer.Tutorial;
 using Acme_Project.Presentation_Layer.About;
+using System.Data.SqlClient;
 
 namespace Acme_Project.Presentatin_Layer
 {
@@ -24,6 +25,41 @@ namespace Acme_Project.Presentatin_Layer
         public frmMaintenance()
         {
             InitializeComponent();
+        }
+
+        private void DisplayDashboard()
+        {
+            string numSalesQuery = "select Products.ProductName, ProductTypes.ProductType, count(SaleID) numSales " +
+                "from Products join ProductTypes on (ProductTypes.ProductTypeID = Products.ProductTypeID)" +
+                "join Sales on (Sales.ProductID = Products.ProductID)" +
+                "group by Products.ProductName, ProductTypes.ProductType";
+
+            List<_Dashboard> dashList = new List<_Dashboard>();
+            try
+            {
+                // Automatically  open and close the connection
+                using (var conn = ConnectionManager.DatabaseConnection())
+                using (var cmd = new SqlCommand(numSalesQuery, conn))
+                using (var rdr = cmd.ExecuteReader())
+                {
+
+                    while (rdr.Read())
+                    {
+                        //Define the list items
+                        var dashboard = new _Dashboard(
+                            rdr["ProductName"].ToString(),
+                            rdr["ProductType"].ToString(),
+                            int.Parse(rdr["numSales"].ToString()));
+                        dashList.Add(dashboard);
+                    }
+                    dgvDashboard.DataSource = dashList;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unsuccessful" + ex);
+            }
+
         }
 
         private void btnCustomers_Click(object sender, EventArgs e)
@@ -118,6 +154,11 @@ namespace Acme_Project.Presentatin_Layer
         {
             frmMainAbout mainAbout = new frmMainAbout();
             mainAbout.Show();
+        }
+
+        private void frmMaintenance_Load(object sender, EventArgs e)
+        {
+            DisplayDashboard();
         }
     }
 }
