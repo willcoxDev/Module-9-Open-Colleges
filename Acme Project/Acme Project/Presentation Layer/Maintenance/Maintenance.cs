@@ -67,5 +67,57 @@ namespace Acme_Project.Presentatin_Layer
             frmMainAbout mainAbout = new frmMainAbout();
             mainAbout.Show();
         }
+
+        private void customersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCustomers mainCustomers = new frmCustomers();
+            mainCustomers.ShowDialog();
+        }
+
+        private void productsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMainProducts mainProducts = new frmMainProducts();
+            mainProducts.ShowDialog();
+        }
+
+        private void productTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMainProductTypes mainProductTypes = new frmMainProductTypes();
+            mainProductTypes.ShowDialog();
+        }
+
+        private void salesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMainSales mainSales = new frmMainSales();
+            mainSales.ShowDialog();
+        }
+
+        private void categoriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMainCategories mainCategories = new frmMainCategories();
+            mainCategories.ShowDialog();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void tutorialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMainTutorial mainTutorial = new frmMainTutorial();
+            mainTutorial.ShowDialog();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMainAbout mainAbout = new frmMainAbout();
+            mainAbout.Show();
+        }
     }
 }
