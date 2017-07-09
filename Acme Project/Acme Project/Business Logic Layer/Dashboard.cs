@@ -22,7 +22,7 @@ namespace Acme_Project.Business_Logic_Layer
         {
             ProductName = productname;
             ProductType = productype;
-            NumSales = NumSales;
+            NumSales = numsales;
         }
     }
 }
