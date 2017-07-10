@@ -50,33 +50,28 @@
             // 
             // movTutorial
             // 
-            this.movTutorial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.movTutorial.Dock = System.Windows.Forms.DockStyle.Fill;
             this.movTutorial.Enabled = true;
-            this.movTutorial.Location = new System.Drawing.Point(3, 27);
-            this.movTutorial.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.movTutorial.Location = new System.Drawing.Point(0, 24);
             this.movTutorial.Name = "movTutorial";
             this.movTutorial.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("movTutorial.OcxState")));
-            this.movTutorial.Size = new System.Drawing.Size(1865, 1255);
+            this.movTutorial.Size = new System.Drawing.Size(934, 487);
             this.movTutorial.TabIndex = 0;
             // 
             // pnlMaintenance
             // 
             this.pnlMaintenance.Controls.Add(this.btnClose);
             this.pnlMaintenance.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlMaintenance.Location = new System.Drawing.Point(0, 1219);
-            this.pnlMaintenance.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.pnlMaintenance.Location = new System.Drawing.Point(0, 511);
             this.pnlMaintenance.Name = "pnlMaintenance";
-            this.pnlMaintenance.Size = new System.Drawing.Size(2491, 238);
+            this.pnlMaintenance.Size = new System.Drawing.Size(934, 100);
             this.pnlMaintenance.TabIndex = 10;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(128, 103);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnClose.Location = new System.Drawing.Point(48, 43);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(269, 55);
+            this.btnClose.Size = new System.Drawing.Size(101, 23);
             this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -89,10 +84,9 @@
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuBar.Location = new System.Drawing.Point(0, 0);
-            this.menuBar.Margin = new System.Windows.Forms.Padding(80, 0, 0, 0);
+            this.menuBar.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.menuBar.Name = "menuBar";
-            this.menuBar.Padding = new System.Windows.Forms.Padding(16, 5, 0, 5);
-            this.menuBar.Size = new System.Drawing.Size(2491, 55);
+            this.menuBar.Size = new System.Drawing.Size(934, 24);
             this.menuBar.TabIndex = 15;
             this.menuBar.Text = "menuStrip1";
             // 
@@ -107,48 +101,48 @@
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(75, 45);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // customersToolStripMenuItem
             // 
             this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
-            this.customersToolStripMenuItem.Size = new System.Drawing.Size(337, 46);
+            this.customersToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.customersToolStripMenuItem.Text = "Customers";
             this.customersToolStripMenuItem.Click += new System.EventHandler(this.customersToolStripMenuItem_Click);
             // 
             // productsToolStripMenuItem
             // 
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
-            this.productsToolStripMenuItem.Size = new System.Drawing.Size(337, 46);
+            this.productsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.productsToolStripMenuItem.Text = "Products";
             this.productsToolStripMenuItem.Click += new System.EventHandler(this.productsToolStripMenuItem_Click);
             // 
             // productTypesToolStripMenuItem
             // 
             this.productTypesToolStripMenuItem.Name = "productTypesToolStripMenuItem";
-            this.productTypesToolStripMenuItem.Size = new System.Drawing.Size(337, 46);
+            this.productTypesToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.productTypesToolStripMenuItem.Text = "Product Types";
             this.productTypesToolStripMenuItem.Click += new System.EventHandler(this.productTypesToolStripMenuItem_Click);
             // 
             // salesToolStripMenuItem
             // 
             this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
-            this.salesToolStripMenuItem.Size = new System.Drawing.Size(337, 46);
+            this.salesToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.salesToolStripMenuItem.Text = "Sales";
             this.salesToolStripMenuItem.Click += new System.EventHandler(this.salesToolStripMenuItem_Click);
             // 
             // categoriesToolStripMenuItem
             // 
             this.categoriesToolStripMenuItem.Name = "categoriesToolStripMenuItem";
-            this.categoriesToolStripMenuItem.Size = new System.Drawing.Size(337, 46);
+            this.categoriesToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.categoriesToolStripMenuItem.Text = "Categories";
             this.categoriesToolStripMenuItem.Click += new System.EventHandler(this.categoriesToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(337, 46);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.exitToolStripMenuItem.Text = "Exit Application";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -158,32 +152,31 @@
             this.tutorialToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(92, 45);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // tutorialToolStripMenuItem
             // 
             this.tutorialToolStripMenuItem.Name = "tutorialToolStripMenuItem";
-            this.tutorialToolStripMenuItem.Size = new System.Drawing.Size(233, 46);
+            this.tutorialToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.tutorialToolStripMenuItem.Text = "Tutorial";
             this.tutorialToolStripMenuItem.Click += new System.EventHandler(this.tutorialToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(233, 46);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // frmMainTutorial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2491, 1457);
+            this.ClientSize = new System.Drawing.Size(934, 611);
             this.Controls.Add(this.movTutorial);
             this.Controls.Add(this.menuBar);
             this.Controls.Add(this.pnlMaintenance);
-            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "frmMainTutorial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainTutorial";
